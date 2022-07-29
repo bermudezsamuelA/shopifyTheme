@@ -88,19 +88,47 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "announcement_bar_bg_color": "#ffe2d1",
-          "announcement_bar_bg_text": "#132625"
+          "show_announcement": true,
+          "announcement_home_only": false,
+          "announcement_bar_text": "Free Shipping Worldwide on Any Minimum Order Purchases!",
+          "announcement_bar_link": "",
+          "announcement_bar_bg_color": "#3e7879",
+          "announcement_bar_bg_text": "#ffffff",
+          "image_shiping": "shopify:\/\/shop_images\/baseline_airport_shuttle_white_24dp.png"
         }
       },
       "header": {
         "type": "header",
         "settings": {
-          "tint_color": "#000000",
-          "tint_opacity": 25,
-          "text_color": "#ffffff"
+          "logo_width": 150,
+          "enable_sticky": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "show_social": true,
+          "subtitle": "Copyright 2020 Natural Mums Co.",
+          "show_payment_icons": true
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "mode": "disabled",
+          "popup_delay_seconds": 5,
+          "popup_dismiss_for_days": 30,
+          "position": "center",
+          "title": "Sign up and save",
+          "text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.<\/p>",
+          "show_newsletter": true,
+          "show_social_icons": true
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Modern": {
@@ -172,9 +200,6 @@
         "header": {
           "type": "header",
           "settings": {
-            "tint_color": "#000000",
-            "tint_opacity": 15,
-            "text_color": "#ffffff"
           }
         }
       }
@@ -250,9 +275,6 @@
         "header": {
           "type": "header",
           "settings": {
-            "text_color": "#ffffff",
-            "tint_opacity": 25,
-            "tint_color": "#252525"
           }
         }
       }
@@ -326,9 +348,6 @@
         "header": {
           "type": "header",
           "settings": {
-            "text_color": "#ffffff",
-            "tint_opacity": 25,
-            "tint_color": "#000000"
           }
         }
       }
