@@ -1,30 +1,58 @@
-<div class="HeaderSection" id="HeaderSectionId">
-  <div class="iconHeader">
-    <img src="{{ section.settings.logo }}" alt="">
-  </div>
-  <div class="blocksContent">
-    {% for block in section.blocks %}
-    {% assign element = block.settings %}
-    {% case block.type %}
-      <div class="blockLinkList">
-        {% when 'link_list' %}
-          <label class="linkListItem" for="">
-
-          </label>
+<div class="headerContainer">
+  <!-- MENU SUPERIOR -->
+  <div class="HeaderSection" id="HeaderSectionId">
+    <div class="iconHeader">
+      <img src="{{ section.settings.logo }}" alt="">
+    </div>
+    <div class="blocksContent">
+      {% for block in section.blocks %}
+      {% assign element = block.settings %}
+      {% case block.type %}
+        <div class="blockLinkList">
+          {% when 'link_list' %}
+            <div class="linkListItem">
+              {{ element.menu_title }}
+            </div>
+            <ul class="MenuToShow">
+              {% assign menu_options = element.menu %}
+              {% for link in linklists[menu_options].links %}
+                  <li>
+                      <a href="{{link.url}}">
+                          {{ link.title | escape }}
+                      </a>
+                  </li>
+              {% endfor %}
+            </ul>
+  
+        </div>
+        <div class="blockPageItems">
+          {% when 'url' %}
+            <div class="pageUrlItem">
+              {{ element.option_title }}
+            </div>
+  
+        </div>
+      {% endcase %}      
+      {% endfor %}
+    </div>
+    <div class="headerOptions">
+      <div class="user">
+  
       </div>
-      <div class="blockPageItems">
-        {% when 'url' %}
-          <div class="pageUrlItem">
-
-          </div>
+      <div class="search">
+  
       </div>
-    {% endcase %}      
-    {% endfor %}
+      <div class="cart">
+  
+      </div>
+    </div>
   </div>
+  <!-- OPCIONES INFERIORES -->
   <div class="headerOptions">
-
+    
   </div>
 </div>
+
 
 
 {% schema %}
@@ -57,19 +85,75 @@
         "id": "enable_sticky",
         "label": "Stick to top of screen on scroll",
         "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "user_logo",
+        "label": "User logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "search_logo",
+        "label": "Search logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "cart_logo",
+        "label": "Cart logo"
       }
     ],
+    "max_blocks": 5,
     "blocks": [
       {
         "type": "link_list",
         "name": "Menu list",
         "settings": [
+          {
+            "type": "text",
+            "id": "menu_title",
+            "label": "Menu list title to Show",
+            "default": "Page 1"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu to display"
+          }
+        ]
+      },
+      {
+        "type": "product",
+        "name": "Product List",
+        "settings": [
+          {
+            "type": "text",
+            "id": "product_title",
+            "label": "Producto list title to Show",
+            "default": "Page 1"
+          },
+          {
+            "type": "product_list",
+            "id": "product_list",
+            "label": "Products",
+            "limit": 16
+          }
         ]
       },
       {
         "type": "url",
         "name": "Menu option",
         "settings": [
+          {
+            "type": "text",
+            "id": "option_title",
+            "label": "Menu option title to Show",
+            "default": "Page 1"
+          },
+          {
+            "type": "url",
+            "id": "option_link",
+            "label": "Page linked to"
+          }
         ]
       }
     ]

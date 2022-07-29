@@ -1,14 +1,18 @@
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 3% 5%;
+    width: 100%;
+    align-items: stretch;
+    justify-content: flex-start;
+}
 .HeaderSection{
     display: grid;
     grid-template-areas: 
-    "iconHeader blocksContent headerOptions"
-    ". MenuOptions .";
+    "iconHeader blocksContent headerOptions"; 
     grid-template-columns: 30% auto 10%;
     align-items: flex-start;
     justify-items: flex-end;
-    padding: 3% 5%;
-    width: 100%;
-
 }
 
 .iconHeader{
@@ -39,4 +43,12 @@
     display: grid;
     align-items: flex-start;
     justify-content: space-evenly;
+}
+
+.headerOptions{
+    display: grid;
+    width: 100%;
+    align-items: baseline;
+    justify-items: stretch;
+    justify-content: space-around;
 }
