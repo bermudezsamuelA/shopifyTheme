@@ -1,0 +1,207 @@
+<footer id="pagefooter" class="footerContainer" data-section-type="footer">
+  <div class="menuFooterContent">
+    {% for block in section.blocks %}
+      {% assign element = block.settings %}
+      {% case block.type %}
+        {% when 'url' %}
+          <div class="banner">
+            <a href="element.image_link">
+              <img src="{{ element.logo_image | img_url: 'medium' }}" alt="Natural Mums">
+            </a>
+          </div>
+        {% when 'link_list' %}
+          <div class="links">
+            <h5> {{ element.title }}</h5>
+                {% assign footer_linklist = element.menu %}
+                <ul class="link-unstyled text-small">
+                    {% for link in linklists[footer_linklist].links %}
+                        <li>
+                            <a href="{{link.url}}">
+                                {{ link.title | escape }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+          </div>
+        {% when 'menu' %}
+          <div class="policies">
+            <h5> {{ element.title }}</h5>
+                {% assign footer_linklist = element.policies %}
+                <ul class="link-unstyled text-small">
+                    {% for link in linklists[footer_linklist].links %}
+                        <li>
+                            <a href="{{link.url}}">
+                                {{ link.title | escape }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+          </div>             
+        {% when 'text' %}
+          <div class="blogs" id="showBlogs">
+            <h5>{{element.footer_bloglist_title}}</h5>
+            <ul class="blogUnorderList">
+              <li class="badge bg-success itemBlog">
+                {{block.type}}
+              </li>
+            </ul>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <div class="container socialPay">
+      {%- if section.settings.show_social -%}
+        <div class="{% if show_country_selector == false and show_language_selector == false %}lower-footer__full{% else %}lower-footer__right{% endif %}">
+          {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: 'x44' %}
+        </div>
+      {%- endif -%}
+      <span>
+        {{section.settings.subtitle}}
+      </span>
+      {%- if section.settings.show_payment_icons -%}
+        <div class="payment-methods lower-footer__right">
+          <div class="payment-methods__inner">
+            {% for type in shop.enabled_payment_types %}
+              <img src="{{ type | payment_type_img_url }}" alt="">
+            {% endfor %}
+            {%- for type in shop.enabled_payment_types -%}
+              {{ type | payment_type_svg_tag: class: 'payment-icon' }}
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+  </div>
+        
+
+</footer>
+
+<script src="{{ 'bootstrap.min.js' | asset_url }}" defer></script>
+<script src="{{ 'apiConsume.js' | asset_url }}" async></script>
+<script src="{{ 'vendor.min.js' | asset_url }}" async></script>
+<script src="{{ 'theme.js' | asset_url }}" async></script>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_social",
+        "label": "Show social icons",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Company"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Copyrigths",
+        "default": "Copyright 2020 Natural Mums Co."
+      },
+      {
+        "type": "header",
+        "content": "Payment Methods"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_payment_icons",
+        "label": "Show payment icons",
+        "default": true
+      }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "type": "link_list",
+        "name": "menu",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "helpful links"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Helpful links"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu",
+            "info": "This menu won't show dropdown items",
+            "default": "footer"
+          }
+        ]
+      },
+      {
+        "type": "menu",
+        "name": "policies",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "policies links"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Policies links"
+          },
+          {
+            "type": "link_list",
+            "id": "policies",
+            "label": "policies",
+            "info": "This menu won't show dropdown items"
+          }
+        ]
+      },
+      {
+        "type": "url",
+        "name": "logo",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Company Logo Link To"
+          },
+          {
+            "type": "url",
+            "id": "image_link",
+            "label": "Logo will send to"
+          },
+          {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Logo image"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "blogs",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Title logo list"
+          },
+          {
+            "type": "text",
+            "id": "footer_bloglist_title",
+            "label": "Title",
+            "default": "Natural Care Blog"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

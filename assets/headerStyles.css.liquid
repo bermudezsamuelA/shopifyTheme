@@ -1,0 +1,42 @@
+.HeaderSection{
+    display: grid;
+    grid-template-areas: 
+    "iconHeader blocksContent headerOptions"
+    ". MenuOptions .";
+    grid-template-columns: 30% auto 10%;
+    align-items: flex-start;
+    justify-items: flex-end;
+    padding: 3% 5%;
+    width: 100%;
+
+}
+
+.iconHeader{
+    grid-area: iconHeader;
+    justify-self: start;
+}
+
+
+.headerOptions{
+    grid-area: headerOptions;
+}
+
+.blocksContent{
+    display: grid;
+    grid-area: blocksContent;
+    grid-template-areas: "blockLinkList PagesIndividual";
+    grid-template-columns: auto auto;
+    width: fit-content;
+}
+.blockLinkList{
+    grid-area: blockLinkList;
+    display: grid;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.blockPageItems{
+    grid-area: PagesIndividual;
+    display: grid;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}

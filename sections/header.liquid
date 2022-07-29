@@ -1,0 +1,77 @@
+<div class="HeaderSection" id="HeaderSectionId">
+  <div class="iconHeader">
+    <img src="{{ section.settings.logo }}" alt="">
+  </div>
+  <div class="blocksContent">
+    {% for block in section.blocks %}
+    {% assign element = block.settings %}
+    {% case block.type %}
+      <div class="blockLinkList">
+        {% when 'link_list' %}
+          <label class="linkListItem" for="">
+
+          </label>
+      </div>
+      <div class="blockPageItems">
+        {% when 'url' %}
+          <div class="pageUrlItem">
+
+          </div>
+      </div>
+    {% endcase %}      
+    {% endfor %}
+  </div>
+  <div class="headerOptions">
+
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Header",
+    "class": "section-header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Main logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "min": 50,
+        "max": 250,
+        "step": 5,
+        "unit": "px",
+        "label": "Maximum logo width",
+        "info": "Logo height is restricted to 150px.",
+        "default": 150
+      },
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sticky",
+        "label": "Stick to top of screen on scroll",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "link_list",
+        "name": "Menu list",
+        "settings": [
+        ]
+      },
+      {
+        "type": "url",
+        "name": "Menu option",
+        "settings": [
+        ]
+      }
+    ]
+  }
+{% endschema %}

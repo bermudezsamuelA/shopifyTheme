@@ -1,0 +1,35 @@
+footer{
+    display: grid;
+    grid-template-areas: 
+    " contentMenu    contentMenu    contentMenu    contentMenu "
+    " socialPay    socialPay   socialPay   socialPay";
+    padding: 5% 10%;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    place-items: center;
+}  
+
+.socialPay{
+    grid-area: socialPay;
+}
+.menuFooterContent{
+    display: grid;
+    grid-area: contentMenu;
+    grid-template-areas: 
+    " banner    links    policies    blogs ";
+    width: 100%;
+    grid-template-columns: 1fr auto auto 1fr;
+    place-items: center;
+}
+.banner{
+    grid-area: banner;
+}
+.links{
+    grid-area: links;
+}
+.policies{
+    grid-area: policies;
+}
+.blogs{
+    grid-area: blogs;
+}
