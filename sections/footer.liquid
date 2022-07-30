@@ -4,15 +4,13 @@
       {% assign element = block.settings %}
       {% case block.type %}
         {% when 'url' %}
-          <div class="banner">
-            <a href="element.image_link">
+          <div class="iconCompany">
               <img 
               src="{{ element.logo_image | img_url: 'medium' }}" 
               alt="Natural Mums"
               width="{{ element.logo_width }}"
               height="{{ element.logo_height }}"
               >
-            </a>
           </div>
         {% when 'link_list' %}
           <div class="links">
@@ -194,11 +192,6 @@
           {
             "type": "header",
             "content": "Company Logo Link To"
-          },
-          {
-            "type": "url",
-            "id": "image_link",
-            "label": "Logo will send to"
           },
           {
             "type": "image_picker",
