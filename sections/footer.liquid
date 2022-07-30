@@ -45,10 +45,7 @@
         {% when 'text' %}
           <div class="blogs" id="showBlogs">
             <h5>{{element.footer_bloglist_title}}</h5>
-            <ul class="blogUnorderList">
-              <li class="badge bg-success itemBlog">
-                {{block.type}}
-              </li>
+            <ul class="blogUnorderList" id="blogList">
             </ul>
           </div>
       {% endcase %}
@@ -81,13 +78,19 @@
 <script>
   
   if(document.getElementById('showBlogs') != null){
-      console.log("aqui")
       const url ='/admin/api/2022-07/blogs.json'
       fetch(url)
       .then((res)=> res.json())
       .then((data)=>{
-          console.log('data',data)
-          document.getElementById('showBlogs')
+          document.getElementById('blogList').innerHTML=''
+          data.blogs.forEach(element => {
+            document.getElementById('blogList').innerHTML+=`
+             <li class="badge bg-success itemBlog" >
+                ${block.title}
+              </li>
+            `;
+          });
+
       })
   }
 </script>
