@@ -6,7 +6,12 @@
         {% when 'url' %}
           <div class="banner">
             <a href="element.image_link">
-              <img src="{{ element.logo_image | img_url: 'medium' }}" alt="Natural Mums">
+              <img 
+              src="{{ element.logo_image | img_url: 'medium' }}" 
+              alt="Natural Mums"
+              width="{{ element.logo_width }}"
+              height="{{ element.logo_height }}"
+              >
             </a>
           </div>
         {% when 'link_list' %}
@@ -183,6 +188,28 @@
             "type": "image_picker",
             "id": "logo_image",
             "label": "Logo image"
+          },
+          {
+            "type": "range",
+            "id": "logo_width",
+            "min": 50,
+            "max": 250,
+            "step": 5,
+            "unit": "px",
+            "label": "Maximum logo width",
+            "info": "Logo width.",
+            "default": 150
+          },
+          {
+            "type": "range",
+            "id": "logo_height",
+            "min": 50,
+            "max": 250,
+            "step": 5,
+            "unit": "px",
+            "label": "Maximum logo width",
+            "info": "Logo height.",
+            "default": 150
           }
         ]
       },
