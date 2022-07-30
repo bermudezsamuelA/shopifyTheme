@@ -44,6 +44,11 @@
           <div class="blogs" id="showBlogs">
             <h5>{{element.footer_bloglist_title}}</h5>
             <ul class="blogUnorderList" id="blogList">
+              {% for article in blog.articles %}
+                <li class="itemBlog" >
+                  {{article.title}}
+                </li>
+              {% endfor %}
             </ul>
           </div>
       {% endcase %}

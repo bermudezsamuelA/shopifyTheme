@@ -1,4 +1,4 @@
-<div class="headerContainer">
+<div class="headerContainer" id="header_custom">
   <!-- MENU SUPERIOR -->
   <div class="HeaderSection" id="HeaderSectionId">
     <div class="iconHeaderContainer">
@@ -13,28 +13,17 @@
       {% for block in section.blocks %}
       {% assign element = block.settings %}
       {% case block.type %}
+      {% when 'link_list' %}
         <div class="blockLinkList">
-          {% when 'link_list' %}
-            <div class="linkListItem">
+            <button class="dropdownButton">
               {{ element.menu_title }}
-            </div>
-            <ul class="MenuToShow">
-              {% assign menu_options = element.menu %}
-              {% for link in linklists[menu_options].links %}
-                  <li>
-                      <a href="{{link.url}}">
-                          {{ link.title | escape }}
-                      </a>
-                  </li>
-              {% endfor %}
-            </ul>
-  
+            </button>  
         </div>
+        {% when 'url' %}
         <div class="blockPageItems">
-          {% when 'url' %}
-            <div class="pageUrlItem">
+            <button class="dropdownButton">
               {{ element.option_title }}
-            </div>
+            </button>
   
         </div>
       {% endcase %}      
@@ -66,6 +55,46 @@
 </div>
 
 
+<script>
+  
+  if(document.getElementById('header_custom') != null){
+    function productConsume(){
+      const url ='/admin/api/2022-07/blogs.json'
+      fetch(url)
+      .then((res)=> res.json())
+      .then(({blogs})=>{
+          document.getElementById('blogList').innerHTML=''
+          blogs.forEach(element => {
+        console.log(element)
+            document.getElementById('blogList').innerHTML+=`
+             <li class="itemBlog" >
+                ${element.title}
+              </li>
+            `;
+          });
+
+      })
+    }
+    function pagesConsume(){
+      const url ='/admin/api/2022-07/blogs.json'
+      fetch(url)
+      .then((res)=> res.json())
+      .then(({blogs})=>{
+          document.getElementById('blogList').innerHTML=''
+          blogs.forEach(element => {
+        console.log(element)
+            document.getElementById('blogList').innerHTML+=`
+             <li class="itemBlog" >
+                ${element.title}
+              </li>
+            `;
+          });
+
+      })
+    }
+     
+  }
+</script>
 
 {% schema %}
   {
@@ -123,14 +152,9 @@
           {
             "type": "text",
             "id": "menu_title",
-            "label": "Menu list title to Show",
-            "default": "Page 1"
+            "label": "pages list title to Show",
+            "default": "Our Story"
           },
-          {
-            "type": "link_list",
-            "id": "menu",
-            "label": "Menu to display"
-          }
         ]
       },
       {
@@ -140,15 +164,9 @@
           {
             "type": "text",
             "id": "product_title",
-            "label": "Producto list title to Show",
-            "default": "Page 1"
+            "label": "Product list title to Show",
+            "default": "All Natural Products"
           },
-          {
-            "type": "product_list",
-            "id": "product_list",
-            "label": "Products",
-            "limit": 16
-          }
         ]
       },
       {
