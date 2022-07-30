@@ -17,8 +17,8 @@
         <div class="productsList">
             <button class="dropdownButton" onclick="productConsume()">
               {{ element.product_title}}
-              <img src="{{ section.settings.product_title_icon_up | img_url: 'small'}}" alt="">
-              <img src="{{ section.settings.product_title_icon_down | img_url: 'small'}}" alt="">
+              <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconShow"  id="productUpIcon" alt="">
+              <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconHidden" id="productDownIcon" alt="">
               
             </button>  
         </div>
@@ -27,8 +27,8 @@
             <button class="dropdownButton" onclick="pagesConsume()">
               {{ element.menu_title }}
             </button>
-            <img src="{{ section.settings.product_title_icon_up | img_url: 'small'}}" alt="">
-            <img src="{{ section.settings.product_title_icon_down | img_url: 'small'}}" alt="">
+            <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconShow"  id="pageUpIcon" alt="">
+            <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconHidden"  id="pageDownIcon" alt="">
         </div>
       {% endcase %}      
       {% endfor %}
@@ -62,7 +62,10 @@
       .then((res)=> res.json())
       .then((data)=>{
         console.log(data)
-          document.getElementById('dropdownOptionsDiv').innerHTML=''
+          document.getElementById('dropdownOptionsDiv').innerHTML='';
+          let iconUp = document.getElementById('productUpIcon')
+          let iconDown = document.getElementById('productDownIcon')
+        console.log(iconUp.classList, iconDown.classList)
           // blogs.forEach(element => {
           //   document.getElementById('blogList').innerHTML+=`
           //  <div class="itemDropdown">
@@ -84,6 +87,8 @@
       .then((data)=>{
         console.log(data)
           document.getElementById('dropdownOptionsDiv').innerHTML=''
+          let iconUp = document.getElementById('pageUpIcon')
+          let iconDown = document.getElementById('pageDownIcon')
         //   blogs.forEach(element => {
         // console.log(element)
         //     document.getElementById('blogList').innerHTML+=`
@@ -147,12 +152,12 @@
       },
       {
         "type": "image_picker",
-        "id": "product_title_icon_down",
+        "id": "title_icon_down",
         "label": "go DOWN button icon"
       },
       {
         "type": "image_picker",
-        "id": "product_title_icon_up",
+        "id": "title_icon_up",
         "label": "go UP button icon"
       }
     ],
