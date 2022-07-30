@@ -82,6 +82,7 @@
       fetch(url)
       .then((res)=> res.json())
       .then((data)=>{
+        console.log(data)
           document.getElementById('blogList').innerHTML=''
           data.blogs.forEach(element => {
             document.getElementById('blogList').innerHTML+=`
