@@ -105,15 +105,24 @@
             "settings": {
               "product_title": "All Natural Products"
             }
+          },
+          "0c1494a4-7048-44bf-9521-cfe468f06e69": {
+            "type": "link_list",
+            "settings": {
+              "menu_title": "Our Story"
+            }
           }
         },
         "block_order": [
-          "a431c9bf-b5d2-4bb3-8819-d2e6607d7bcd"
+          "a431c9bf-b5d2-4bb3-8819-d2e6607d7bcd",
+          "0c1494a4-7048-44bf-9521-cfe468f06e69"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/naturalmums_design-01.png",
           "logo_width": 220,
-          "enable_sticky": true
+          "enable_sticky": true,
+          "product_title_icon_down": "shopify:\/\/shop_images\/baseline_keyboard_arrow_down_white_24dp.png",
+          "product_title_icon_up": "shopify:\/\/shop_images\/baseline_expand_less_white_24dp.png"
         }
       },
       "footer": {
