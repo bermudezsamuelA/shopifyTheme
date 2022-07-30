@@ -107,6 +107,29 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "ecd9d8b4-49ab-42e5-bcd7-ab8e3f1b8900": {
+            "type": "url",
+            "settings": {
+              "image_link": "",
+              "logo_image": "shopify:\/\/shop_images\/naturalmums_design-01.png",
+              "logo_width": 250,
+              "logo_height": 250
+            }
+          },
+          "17650e49-90a2-450f-b881-d78fa875fa80": {
+            "type": "link_list",
+            "settings": {
+              "heading": "helpful links",
+              "title": "Helpful links",
+              "menu": "helpful-links"
+            }
+          }
+        },
+        "block_order": [
+          "ecd9d8b4-49ab-42e5-bcd7-ab8e3f1b8900",
+          "17650e49-90a2-450f-b881-d78fa875fa80"
+        ],
         "settings": {
           "show_social": true,
           "subtitle": "Copyright 2020 Natural Mums Co.",
