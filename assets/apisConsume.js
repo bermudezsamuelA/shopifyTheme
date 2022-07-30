@@ -1,4 +1,6 @@
 
+    console.log("aqui")
+
 if(document.getElementById('pagefooter') != null){
     console.log("aqui")
     const url ='/admin/api/2022-07/blogs.json'
