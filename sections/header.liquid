@@ -65,7 +65,17 @@
           document.getElementById('dropdownOptionsDiv').innerHTML='';
           let iconUp = document.getElementById('productUpIcon')
           let iconDown = document.getElementById('productDownIcon')
-        console.log(iconUp.classList, iconDown.classList)
+        if(iconDown.classList[0] == "iconShow"){
+          iconDown.classList.remove("iconShow");
+          iconUp.classList.add("iconShow");
+          iconDown.classList.add("iconHidden");
+          iconUp.classList.remove("iconHidden");
+        }else{
+          iconUp.classList.remove("iconShow");
+          iconDown.classList.add("iconShow");
+          iconUp.classList.add("iconHidden");
+          iconDown.classList.remove("iconHidden");
+        }
           // blogs.forEach(element => {
           //   document.getElementById('blogList').innerHTML+=`
           //  <div class="itemDropdown">
@@ -89,6 +99,17 @@
           document.getElementById('dropdownOptionsDiv').innerHTML=''
           let iconUp = document.getElementById('pageUpIcon')
           let iconDown = document.getElementById('pageDownIcon')
+          if(iconDown.classList[0] == "iconShow"){
+          iconDown.classList.remove("iconShow");
+          iconUp.classList.add("iconShow");
+          iconDown.classList.add("iconHidden");
+          iconUp.classList.remove("iconHidden");
+        }else{
+          iconUp.classList.remove("iconShow");
+          iconDown.classList.add("iconShow");
+          iconUp.classList.add("iconHidden");
+          iconDown.classList.remove("iconHidden");
+        }
         //   blogs.forEach(element => {
         // console.log(element)
         //     document.getElementById('blogList').innerHTML+=`
