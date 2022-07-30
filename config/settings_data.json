@@ -121,8 +121,8 @@
           "logo": "shopify:\/\/shop_images\/naturalmums_design-01.png",
           "logo_width": 220,
           "enable_sticky": true,
-          "product_title_icon_down": "shopify:\/\/shop_images\/baseline_keyboard_arrow_down_white_24dp.png",
-          "product_title_icon_up": "shopify:\/\/shop_images\/baseline_expand_less_white_24dp.png"
+          "title_icon_down": "shopify:\/\/shop_images\/baseline_keyboard_arrow_down_white_24dp.png",
+          "title_icon_up": "shopify:\/\/shop_images\/baseline_expand_less_white_24dp.png"
         }
       },
       "footer": {
