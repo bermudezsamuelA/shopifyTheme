@@ -86,10 +86,10 @@
         // const blogs = data.blogs
         console.log(blogs)
           document.getElementById('blogList').innerHTML=''
-          data.blogs.forEach(element => {
+          blogs.forEach(element => {
             document.getElementById('blogList').innerHTML+=`
              <li class="badge bg-success itemBlog" >
-                ${block.title}
+                ${element.title}
               </li>
             `;
           });
