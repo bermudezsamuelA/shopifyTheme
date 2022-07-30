@@ -111,9 +111,8 @@
           "ecd9d8b4-49ab-42e5-bcd7-ab8e3f1b8900": {
             "type": "url",
             "settings": {
-              "image_link": "",
               "logo_image": "shopify:\/\/shop_images\/naturalmums_design-01.png",
-              "logo_width": 250,
+              "logo_width": 345,
               "logo_height": 250
             }
           },
