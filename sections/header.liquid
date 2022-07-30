@@ -13,13 +13,13 @@
       {% for block in section.blocks %}
       {% assign element = block.settings %}
       {% case block.type %}
-      {% when 'link_list' %}
+      {% when 'product' %}
         <div class="productsList">
             <button class="dropdownButton" onclick="productConsume()">
               {{ element.menu_title }}
             </button>  
         </div>
-        {% when 'url' %}
+        {% when 'link_list' %}
         <div class="descriptionOptions">
             <button class="dropdownButton" onclick="pagesConsume()">
               {{ element.option_title }}
@@ -153,7 +153,7 @@
             "id": "menu_title",
             "label": "pages list title to Show",
             "default": "Our Story"
-          },
+          }
         ]
       },
       {
@@ -165,23 +165,6 @@
             "id": "product_title",
             "label": "Product list title to Show",
             "default": "All Natural Products"
-          },
-        ]
-      },
-      {
-        "type": "url",
-        "name": "Menu option",
-        "settings": [
-          {
-            "type": "text",
-            "id": "option_title",
-            "label": "Menu option title to Show",
-            "default": "search, account, item"
-          },
-          {
-            "type": "url",
-            "id": "option_link",
-            "label": "Page linked to"
           }
         ]
       }
