@@ -16,15 +16,19 @@
       {% when 'product' %}
         <div class="productsList">
             <button class="dropdownButton" onclick="productConsume()">
-              {{ element.menu_title }}
+              {{ element.product_title}}
+              <img src="{{ section.settings.product_title_icon_up | img_url: 'small'}}" alt="">
+              <img src="{{ section.settings.product_title_icon_down | img_url: 'small'}}" alt="">
+              
             </button>  
         </div>
         {% when 'link_list' %}
         <div class="descriptionOptions">
             <button class="dropdownButton" onclick="pagesConsume()">
-              {{ element.option_title }}
+              {{ element.menu_title }}
             </button>
-  
+            <img src="{{ section.settings.product_title_icon_up | img_url: 'small'}}" alt="">
+            <img src="{{ section.settings.product_title_icon_down | img_url: 'small'}}" alt="">
         </div>
       {% endcase %}      
       {% endfor %}
@@ -139,6 +143,16 @@
       {
         "type": "image_picker",
         "id": "cart_logo",
+        "label": "Cart logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_title_icon_down",
+        "label": "Cart logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "product_title_icon_up",
         "label": "Cart logo"
       }
     ],
