@@ -76,9 +76,21 @@
         </div>
       {%- endif -%}
   </div>
-        
-
 </footer>
+
+<script>
+  
+  if(document.getElementById('showBlogs') != null){
+      console.log("aqui")
+      const url ='/admin/api/2022-07/blogs.json'
+      fetch(url)
+      .then((res)=> res.json())
+      .then((data)=>{
+          console.log('data',data)
+          document.getElementById('showBlogs')
+      })
+  }
+</script>
 
 <script src="{{ 'bootstrap.min.js' | asset_url }}" defer></script>
 <script src="{{ 'apiConsume.js' | asset_url }}" async></script>
