@@ -1,7 +1,7 @@
 .headerContainer{
     display: flex;
     flex-direction: column;
-    padding: 1% 5%;
+    padding: 1% 10%;
     width: 100%;
     align-items: stretch;
     justify-content: flex-start;
@@ -16,7 +16,7 @@
     display: grid;
     grid-template-areas: 
     "iconHeader blocksContent headerOptions"; 
-    grid-template-columns: 30% auto 10%;
+    grid-template-columns: 20% 60% 20%;
     align-items: flex-start;
     justify-items: flex-end;
     height: 75px;
@@ -38,11 +38,11 @@
 }
 
 .blocksContent{
-    display: grid;
     grid-area: blocksContent;
+    display: grid;
     grid-template-areas: "blockLinkList PagesIndividual";
     grid-template-columns: auto auto;
-    width: fit-content;
+    width: 100%;
 }
 .blockLinkList{
     grid-area: blockLinkList;
