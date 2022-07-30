@@ -1,13 +1,13 @@
 .headerContainer{
     display: flex;
     flex-direction: column;
-    padding: 3% 5%;
+    padding: 1% 5%;
     width: 100%;
     align-items: stretch;
     justify-content: flex-start;
     background-color: transparent;
     position: absolute;
-    top: 0;
+    top: 45px;
     left: 0;
 }
 .HeaderSection{
@@ -17,6 +17,7 @@
     grid-template-columns: 30% auto 10%;
     align-items: flex-start;
     justify-items: flex-end;
+    height: 75px;
 }
 
 .iconHeader{
@@ -27,6 +28,7 @@
 
 .headerOptions{
     grid-area: headerOptions;
+    
 }
 
 .blocksContent{
@@ -49,10 +51,14 @@
     justify-content: space-evenly;
 }
 
-.headerOptions{
+.headerMenuOptions{
     display: grid;
+    padding: 1% 5%;
     width: 100%;
     align-items: baseline;
     justify-items: stretch;
     justify-content: space-around;
+    position: absolute;
+    top: 45px;
+    left: 0;
 }
