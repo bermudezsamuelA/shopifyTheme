@@ -1,11 +1,12 @@
 <div class="headerContainer">
   <!-- MENU SUPERIOR -->
   <div class="HeaderSection" id="HeaderSectionId">
-    <div class="iconHeader">
+    <div class="iconHeaderContainer">
       <img 
+      class="iconHeader"
       src="{{ section.settings.logo  | img_url: 'medium' }}" 
       alt="{{ section.settings.logo.alt }}"
-      width="{{ element.logo_width }}"
+      width="{{ section.settings.logo_width }}"
       >
     </div>
     <div class="blocksContent">

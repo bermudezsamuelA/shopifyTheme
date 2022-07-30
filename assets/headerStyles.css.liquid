@@ -9,6 +9,7 @@
     position: absolute;
     top: 45px;
     left: 0;
+    z-index: 2;
 }
 .HeaderSection{
     display: grid;
@@ -20,11 +21,14 @@
     height: 75px;
 }
 
-.iconHeader{
+.iconHeaderContainer{
     grid-area: iconHeader;
     justify-self: start;
 }
-
+.iconHeader{
+    height: 100px;
+    margin-top: -15px;
+}
 
 .headerOptions{
     grid-area: headerOptions;
@@ -61,4 +65,5 @@
     position: absolute;
     top: 77px;
     left: 0;
+    z-index: 1;
 }
