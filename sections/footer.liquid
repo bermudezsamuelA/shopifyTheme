@@ -82,11 +82,10 @@
       fetch(url)
       .then((res)=> res.json())
       .then(({blogs})=>{
-        // console.log(d1ata)
-        // const blogs = data.blogs
-        console.log(blogs)
           document.getElementById('blogList').innerHTML=''
           blogs.forEach(element => {
+        console.log(element)
+
             document.getElementById('blogList').innerHTML+=`
              <li class="badge bg-success itemBlog" >
                 ${element.title}
