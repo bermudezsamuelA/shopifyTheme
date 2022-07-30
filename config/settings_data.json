@@ -124,11 +124,27 @@
               "title": "Helpful links",
               "menu": "helpful-links"
             }
+          },
+          "e611c14e-7042-405e-a55c-9e64864211ec": {
+            "type": "menu",
+            "settings": {
+              "heading": "policies links",
+              "title": "Policies links",
+              "policies": "footer"
+            }
+          },
+          "b22e2d29-aef2-4c4f-b1ca-8035e905813a": {
+            "type": "text",
+            "settings": {
+              "footer_bloglist_title": "Natural Care Blog"
+            }
           }
         },
         "block_order": [
           "ecd9d8b4-49ab-42e5-bcd7-ab8e3f1b8900",
-          "17650e49-90a2-450f-b881-d78fa875fa80"
+          "17650e49-90a2-450f-b881-d78fa875fa80",
+          "e611c14e-7042-405e-a55c-9e64864211ec",
+          "b22e2d29-aef2-4c4f-b1ca-8035e905813a"
         ],
         "settings": {
           "show_social": true,
