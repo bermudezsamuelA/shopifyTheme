@@ -14,14 +14,14 @@
       {% assign element = block.settings %}
       {% case block.type %}
       {% when 'link_list' %}
-        <div class="blockLinkList">
-            <button class="dropdownButton">
+        <div class="productsList">
+            <button class="dropdownButton" onclick="productConsume()">
               {{ element.menu_title }}
             </button>  
         </div>
         {% when 'url' %}
-        <div class="blockPageItems">
-            <button class="dropdownButton">
+        <div class="descriptionOptions">
+            <button class="dropdownButton" onclick="pagesConsume()">
               {{ element.option_title }}
             </button>
   
@@ -44,14 +44,8 @@
 
 </div>
   <!-- OPCIONES INFERIORES -->
-<div class="headerMenuOptions">
-  <div class="itemDropdown">
-    <img src="" alt="" class="dropdownImg">
-    <h5 class="dropdownTitle"></h5>
-    <ul class="dropdownList">
-      <li class="dropdownItemList"></li>
-    </ul>
-  </div>
+<div class="headerMenuOptions" id="dropdownOptionsDiv">
+
 </div>
 
 
@@ -59,36 +53,41 @@
   
   if(document.getElementById('header_custom') != null){
     function productConsume(){
-      const url ='/admin/api/2022-07/blogs.json'
+      const url ='/admin/api/2022-07/products.json'
       fetch(url)
       .then((res)=> res.json())
-      .then(({blogs})=>{
-          document.getElementById('blogList').innerHTML=''
-          blogs.forEach(element => {
-        console.log(element)
-            document.getElementById('blogList').innerHTML+=`
-             <li class="itemBlog" >
-                ${element.title}
-              </li>
-            `;
-          });
+      .then((data)=>{
+        console.log(data)
+          document.getElementById('dropdownOptionsDiv').innerHTML=''
+          // blogs.forEach(element => {
+          //   document.getElementById('blogList').innerHTML+=`
+          //  <div class="itemDropdown">
+          //   <img src="" alt="" class="dropdownImg">
+          //   <h5 class="dropdownTitle"></h5>
+          //   <ul class="dropdownList">
+          //     <li class="dropdownItemList"></li>
+          //   </ul>
+          // </div>
+          //   `;
+          // });
 
       })
     }
     function pagesConsume(){
-      const url ='/admin/api/2022-07/blogs.json'
+      const url ='/admin/api/2022-07/pages.json'
       fetch(url)
       .then((res)=> res.json())
-      .then(({blogs})=>{
-          document.getElementById('blogList').innerHTML=''
-          blogs.forEach(element => {
-        console.log(element)
-            document.getElementById('blogList').innerHTML+=`
-             <li class="itemBlog" >
-                ${element.title}
-              </li>
-            `;
-          });
+      .then((data)=>{
+        console.log(data)
+          document.getElementById('dropdownOptionsDiv').innerHTML=''
+        //   blogs.forEach(element => {
+        // console.log(element)
+        //     document.getElementById('blogList').innerHTML+=`
+        //      <li class="itemBlog" >
+        //         ${element.title}
+        //       </li>
+        //     `;
+        //   });
 
       })
     }

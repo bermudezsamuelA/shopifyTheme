@@ -85,14 +85,14 @@
       fetch(url)
       .then((res)=> res.json())
       .then(({blogs})=>{
-          // document.getElementById('blogList').innerHTML=''
-          // blogs.forEach(element => {
-          //   document.getElementById('blogList').innerHTML+=`
-          //    <li class="itemBlog" >
-          //       ${element.title}
-          //     </li>
-          //   `;
-          // });
+          document.getElementById('blogList').innerHTML=''
+          blogs.forEach(element => {
+            document.getElementById('blogList').innerHTML+=`
+             <li class="itemBlog" >
+                ${element.title}
+              </li>
+            `;
+          });
 
       })
   }
