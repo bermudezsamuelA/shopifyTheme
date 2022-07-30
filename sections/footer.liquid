@@ -66,12 +66,12 @@
       {%- if section.settings.show_payment_icons -%}
         <div class="payment-methods lower-footer__right">
           <div class="payment-methods__inner">
-            {% for type in shop.enabled_payment_types %}
-              <img src="{{ type | payment_type_img_url }}" alt="">
+            {% for payment_type in shop.enabled_payment_types %}
+              <img src="{{ payment_type | payment_type_img_url }}">
             {% endfor %}
-            {%- for type in shop.enabled_payment_types -%}
-              {{ type | payment_type_svg_tag: class: 'payment-icon' }}
-            {%- endfor -%}
+            <!-- {%- for payment_type in shop.enabled_payment_types -%}
+              {{ payment_type | payment_type_svg_tag: class: 'payment-icon' }}
+            {%- endfor -%} -->
           </div>
         </div>
       {%- endif -%}
