@@ -2,7 +2,11 @@
   <!-- MENU SUPERIOR -->
   <div class="HeaderSection" id="HeaderSectionId">
     <div class="iconHeader">
-      <img src="{{ section.settings.logo }}" alt="">
+      <img 
+      src="{{ section.settings.logo  | img_url: 'medium' }}" 
+      alt="{{ section.settings.logo.alt }}"
+      width="{{ element.logo_width }}"
+      >
     </div>
     <div class="blocksContent">
       {% for block in section.blocks %}
@@ -80,7 +84,7 @@
         "step": 5,
         "unit": "px",
         "label": "Maximum logo width",
-        "info": "Logo height is restricted to 150px.",
+        "info": "Logo height is restricted to 75px.",
         "default": 150
       },
       {
