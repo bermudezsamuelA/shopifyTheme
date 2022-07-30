@@ -99,6 +99,35 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "66cf2d9e-6216-41a2-8bed-7a1a92c22a82": {
+            "type": "product",
+            "settings": {
+              "product_title": "All Natural Products",
+              "product_list": [
+                "ultimate-moisturizer",
+                "tumeric-soap",
+                "toasty-coffee-soap",
+                "tangerine-purple-tea-antiodioxant-face-mask",
+                "natural-deodrant-balm",
+                "oat-trail-mix-on-the-go",
+                "mum-baby-balm",
+                "lactation-tea-infused-with-purple-tea",
+                "katlu-add-go-traditional-indian-genfo-barley-porridge",
+                "activated-charcoal-lavender-face-mask",
+                "activated-charcoal-soap",
+                "date-ball-on-the-go",
+                "goat-milk-soap",
+                "honey-oatmeal",
+                "lactation-tea",
+                "wrinkie-reducer-cream"
+              ]
+            }
+          }
+        },
+        "block_order": [
+          "66cf2d9e-6216-41a2-8bed-7a1a92c22a82"
+        ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/naturalmums_design-01.png",
           "logo_width": 150,
