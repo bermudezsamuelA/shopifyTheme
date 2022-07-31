@@ -88,11 +88,12 @@
     height: fit-content;
 }
 /* el menu de los productos */
-.collectionsLists{
-    grid-template-columns: repeat(auto-fill, minmax(5rem,1fr));
+.collectionsLists, .pageList{
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
     align-items: center;
-    justify-content: stretch;
+    justify-content: center;
     justify-items: stretch;
+    width: 100%;
 }
 .dropdownItem{
     display: grid;
@@ -127,7 +128,9 @@
     grid-area: linksItem ;
 }
 /* menu de las paginas */
-
+.pageList{
+    justify-content: center;
+}
 /* display or not icon */
 .iconShow{
     display: inline;
