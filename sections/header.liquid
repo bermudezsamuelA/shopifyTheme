@@ -1,6 +1,6 @@
 <div class="headerContainer" id="header_custom">
   <!-- MENU SUPERIOR -->
-  <div class="HeaderSection" id="HeaderSectionId">
+  <div class="HeaderSection" id="UpperHeaderId">
     <div class="iconHeaderContainer">
       <img 
       class="iconHeader"
@@ -48,8 +48,25 @@
 
 </div>
   <!-- OPCIONES INFERIORES -->
-<div class="headerMenuOptions" id="dropdownOptionsDiv">
-
+<div class="headerMenuOptions" id="lowerHeaderId">
+  <div class="collectionsLists">
+    {% for collection in collections %}
+    <div class="itemDropdown">
+        <img src="{{- collection.image }}" alt="" class="dropdownImg">
+        <h5 class="dropdownTitle">
+          {{- collection.title | link_to: collection.url }}
+        </h5>
+        <ul class="dropdownList">
+          {% for product in collection.products %}
+           <li class="dropdownItemList">
+            <a href="{{ product.url }}">{{ product.title }}</a>
+           </li>
+            
+          {% endfor %}
+         </ul>
+       </div>
+    {% endfor %}
+  </div>
 </div>
 
 
@@ -60,21 +77,39 @@
       const url ='/admin/api/2022-07/products.json'
       fetch(url)
       .then((res)=> res.json())
-      .then((data)=>{
-        console.log(data)
+      .then(({products})=>{
           document.getElementById('dropdownOptionsDiv').innerHTML='';
           let iconUp = document.getElementById('productUpIcon')
           let iconDown = document.getElementById('productDownIcon')
+          let upperHeader = document.getElementById('UpperHeaderId');
+          let lowerHeader = document.getElementById('lowerHeaderId');
         if(iconDown.classList[0] == "iconShow"){
           iconDown.classList.remove("iconShow");
           iconUp.classList.add("iconShow");
+
           iconDown.classList.add("iconHidden");
           iconUp.classList.remove("iconHidden");
+
+          upperHeader.classList.add("headerClicked");
+          upperHeader.classList.add("upperHeaderBorder");
+
+          lowerHeader.classList.add("headerClicked");
+          lowerHeader.classList.add("lowerHeaderMovement");
+
+
         }else{
           iconUp.classList.remove("iconShow");
           iconDown.classList.add("iconShow");
+
           iconUp.classList.add("iconHidden");
           iconDown.classList.remove("iconHidden");
+
+          upperHeader.classList.remove("headerClicked");
+          upperHeader.classList.remove("upperHeaderBorder");
+
+          lowerHeader.classList.remove("headerClicked");
+          lowerHeader.classList.remove("lowerHeaderMovement");
+
         }
           // blogs.forEach(element => {
           //   document.getElementById('blogList').innerHTML+=`
@@ -94,22 +129,24 @@
       const url ='/admin/api/2022-07/pages.json'
       fetch(url)
       .then((res)=> res.json())
-      .then((data)=>{
-        console.log(data)
-          document.getElementById('dropdownOptionsDiv').innerHTML=''
-          let iconUp = document.getElementById('pageUpIcon')
-          let iconDown = document.getElementById('pageDownIcon')
+      .then(({pages})=>{
+        console.log(pages)
+          document.getElementById('dropdownOptionsDiv').innerHTML='';
+          let iconUp = document.getElementById('pageUpIcon');
+          let iconDown = document.getElementById('pageDownIcon');
+          let upperHeader = document.getElementById('UpperHeaderId');
+          let lowerHeader = document.getElementById('lowerHeaderId');
           if(iconDown.classList[0] == "iconShow"){
-          iconDown.classList.remove("iconShow");
-          iconUp.classList.add("iconShow");
-          iconDown.classList.add("iconHidden");
-          iconUp.classList.remove("iconHidden");
-        }else{
-          iconUp.classList.remove("iconShow");
-          iconDown.classList.add("iconShow");
-          iconUp.classList.add("iconHidden");
-          iconDown.classList.remove("iconHidden");
-        }
+            iconDown.classList.remove("iconShow");
+            iconUp.classList.add("iconShow");
+            iconDown.classList.add("iconHidden");
+            iconUp.classList.remove("iconHidden");
+          }else{
+            iconUp.classList.remove("iconShow");
+            iconDown.classList.add("iconShow");
+            iconUp.classList.add("iconHidden");
+            iconDown.classList.remove("iconHidden");
+          }
         //   blogs.forEach(element => {
         // console.log(element)
         //     document.getElementById('blogList').innerHTML+=`
