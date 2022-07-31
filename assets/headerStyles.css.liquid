@@ -93,22 +93,29 @@
     align-items: center;
 }
 .dropdownItem{
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    'imageItem'
+    'titleItem'
+    'linksItem'
+    ;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     border-right: 0.5px solid #BBB;
-    margin: 0.5rem;
+    padding: 0.8rem;
     width: 25%;
     height: 300px;
 }
 .dropdownImg{
+    grid-area: imageItem;
     border-bottom: 0.8rem solid #F4AB9D;
-    width: 75%;
+    width: 100%;
     height: 105px;
     margin-bottom: 1rem;
 }
 .dropdownTitle{
+    grid-area: titleItem;
     border-bottom: 0.5px solid #BBB;
     font-size: 1.2rem;
 }
