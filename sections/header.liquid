@@ -89,12 +89,15 @@
         iconDown.classList.add("iconHidden");
         iconUp.classList.remove("iconHidden");
 
-        totalHeader.classList.add("headerClicked");
-        upperHeader.classList.add("upperHeaderBorder");
+        
+        totalHeader.classList.remove("headerClicked");
+        upperHeader.classList.remove("upperHeaderBorder");
 
-        lowerHeader.classList.add("headerClicked");
-        lowerHeader.classList.add("lowerHeaderMovement");
-        buttonHeader.classList.add("dropdownButtonBlack")
+        lowerHeader.classList.remove("headerClicked");
+        lowerHeader.classList.remove("lowerHeaderMovement");
+        
+        buttonHeader.classList.remove("dropdownButtonBlack")
+
 
         }else{
         console.log('segundo if')
@@ -105,14 +108,14 @@
           iconUp.classList.add("iconHidden");
           iconDown.classList.remove("iconHidden");
 
-          totalHeader.classList.remove("headerClicked");
-          upperHeader.classList.remove("upperHeaderBorder");
-
-          lowerHeader.classList.remove("headerClicked");
-          lowerHeader.classList.remove("lowerHeaderMovement");
           
-          buttonHeader.classList.remove("dropdownButtonBlack")
+        totalHeader.classList.add("headerClicked");
+        upperHeader.classList.add("upperHeaderBorder");
 
+        lowerHeader.classList.add("headerClicked");
+        lowerHeader.classList.add("lowerHeaderMovement");
+
+        buttonHeader.classList.add("dropdownButtonBlack");
         }
     }
     function pagesConsume(){
