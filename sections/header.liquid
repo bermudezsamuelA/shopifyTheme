@@ -51,7 +51,7 @@
 <div class="headerMenuOptions" id="lowerHeaderId">
   <div class="collectionsLists">
     {% for collection in collections %}
-    <div class="itemDropdown">
+    <div class="dropdownItem">
         <img src="{{- collection.image | img_url: 'medium' }}" alt="" class="dropdownImg">
         <h5 class="dropdownTitle">
           {{- collection.title | link_to: collection.url }}
