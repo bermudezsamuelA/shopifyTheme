@@ -42,13 +42,13 @@
     <div class="independentLinks">
       {% for block in section.blocks %}
       {% assign element = block.settings %}
-      {% case block.type %}
-      {% when 'url' %}
-        <div class="independentLinkList">
-            <a class="independentLinkTitle" id="" >
-              {{ element.independet_title}}            
-            </a>  
-        </div>
+        {% case block.type %}
+          {% when 'url' %}
+            <div class="independentLinkList">
+                <a class="independentLinkTitle" id="" >
+                  {{ element.independet_title}}            
+                </a>  
+            </div>
       
       {% endcase %}      
       {% endfor %}
@@ -346,18 +346,18 @@
       {
        "type": "url",
        "name": "links_independent",
-      "settings": [
+       "settings": [
           {
             "type": "text",
             "id": "independet_title",
             "label": "title Link"
-          }
+          },
           {
             "type": "url",
             "id": "url_independent",
             "label": "Link"
           }
-      ]
+        ]
       }
     ]
   }
