@@ -80,17 +80,19 @@
     width: 100%;
     align-items: baseline;
     justify-items: center;
-    justify-content: center;
+    justify-content: stretch;
     position: absolute;
     left: 0;
     z-index: 1;
     transition: top 0.5s ease-in-out;
+    height: fit-content;
 }
 /* el menu de los productos */
 .collectionsLists{
-    justify-content: center;
-    align-items: start;
-    height: 350px;
+    grid-template-columns: repeat(auto-fill, minmax(5rem,1fr));
+    align-items: center;
+    justify-content: stretch;
+    justify-items: stretch;
 }
 .dropdownItem{
     display: grid;
@@ -104,8 +106,8 @@
     justify-items: start;
     border-right: 0.5px solid #BBB;
     padding: 0.8rem;
-    width: 25%;
-    height: 300px;
+    width: 100%;
+    height: fit-content;
 }
 .dropdownImg{
     grid-area: imageItem;
@@ -125,11 +127,7 @@
     grid-area: linksItem ;
 }
 /* menu de las paginas */
-.PagesList{
-    justify-content: center;
-    align-items: start;
-    height: 350px;
-}
+
 /* display or not icon */
 .iconShow{
     display: inline;
@@ -153,7 +151,7 @@
     visibility: visible;
 }
 .showMenu{
-    display: flex;
+    display: grid;
 }
 .hiddeMenu{
     display: none;

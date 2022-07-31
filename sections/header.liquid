@@ -73,9 +73,32 @@
        </div>
     {% endfor %}
   </div>
-  <div class="PagesList hiddeMenu"  id="PagesHeaderSection">
+  <div class="collectionsLists hiddeMenu"  id="PagesHeaderSection">
     {% for page in pages -%}
-      {{ page.title | link_to: page.url }}
+      {% case page.title %}
+        {% when 'Our Story' %}
+        <div class="dropdownItem">
+          <img src="{{- element.us_logo_img | img_url: 'medium' }}" alt="" class="dropdownImg">
+          <a class="dropdownTitle">
+            {{ page.title | link_to: page.url }}
+          </a>
+        </div>
+        {% when 'Our Ingredients' %}
+        <div class="dropdownItem">
+          <img src="{{- element.us_logo_img | img_url: 'medium' }}" alt="" class="dropdownImg">
+          <a class="dropdownTitle">
+            {{ page.title | link_to: page.url }}
+          </a>
+        </div>
+        {% when 'FAQs' %}         
+        <div class="dropdownItem">
+          <img src="{{- element.us_logo_img | img_url: 'medium' }}" alt="" class="dropdownImg">
+          <a class="dropdownTitle">
+            {{ page.title | link_to: page.url }}
+          </a>
+        </div> 
+      {% endcase %}
+
     {%- endfor %}
   </div>
 </div>
