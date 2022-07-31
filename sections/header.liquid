@@ -74,27 +74,22 @@
   
   if(document.getElementById('header_custom') != null){
     function productConsume(){
-      const url ='/admin/api/2022-07/products.json'
-      fetch(url)
-      .then((res)=> res.json())
-      .then(({products})=>{
-          document.getElementById('dropdownOptionsDiv').innerHTML='';
-          let iconUp = document.getElementById('productUpIcon')
-          let iconDown = document.getElementById('productDownIcon')
-          let upperHeader = document.getElementById('UpperHeaderId');
-          let lowerHeader = document.getElementById('lowerHeaderId');
-        if(iconDown.classList[0] == "iconShow"){
-          iconDown.classList.remove("iconShow");
-          iconUp.classList.add("iconShow");
+      let iconUp = document.getElementById('productUpIcon')
+      let iconDown = document.getElementById('productDownIcon')
+      let upperHeader = document.getElementById('UpperHeaderId');
+      let lowerHeader = document.getElementById('lowerHeaderId');
+      if(iconDown.classList[0] == "iconShow"){
+        iconDown.classList.remove("iconShow");
+        iconUp.classList.add("iconShow");
 
-          iconDown.classList.add("iconHidden");
-          iconUp.classList.remove("iconHidden");
+        iconDown.classList.add("iconHidden");
+        iconUp.classList.remove("iconHidden");
 
-          upperHeader.classList.add("headerClicked");
-          upperHeader.classList.add("upperHeaderBorder");
+        upperHeader.classList.add("headerClicked");
+        upperHeader.classList.add("upperHeaderBorder");
 
-          lowerHeader.classList.add("headerClicked");
-          lowerHeader.classList.add("lowerHeaderMovement");
+        lowerHeader.classList.add("headerClicked");
+        lowerHeader.classList.add("lowerHeaderMovement");
 
 
         }else{
@@ -111,19 +106,6 @@
           lowerHeader.classList.remove("lowerHeaderMovement");
 
         }
-          // blogs.forEach(element => {
-          //   document.getElementById('blogList').innerHTML+=`
-          //  <div class="itemDropdown">
-          //   <img src="" alt="" class="dropdownImg">
-          //   <h5 class="dropdownTitle"></h5>
-          //   <ul class="dropdownList">
-          //     <li class="dropdownItemList"></li>
-          //   </ul>
-          // </div>
-          //   `;
-          // });
-
-      })
     }
     function pagesConsume(){
       const url ='/admin/api/2022-07/pages.json'
