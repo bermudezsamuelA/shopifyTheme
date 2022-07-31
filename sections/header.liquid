@@ -93,8 +93,9 @@
       {% case page.title %}
         {% when 'Our Story' %}
         <div class="pageItem">
-          <img src="{{- element2.us_logo_img | img_url: 'medium' }}" alt="" class="dropdownImg">
+          <img src="{{- element.us_logo_img | img_url: 'medium' }}" alt="" class="dropdownImg">
             <a class="pageItemTitle"  href="{{ page.url }}">
+              {{ element.menu_title}}
               About Natural Mums
             </a>
         </div>
@@ -103,6 +104,8 @@
           <img src="{{- element2.ingredient_logo_img | img_url: 'medium' }}" alt="" class="dropdownImg">
             <a class="pageItemTitle"  href="{{ page.url }}">
               Our Natural Ingredients 
+              {{ element2.menu_title}}
+
             </a>
         </div>
         {% when 'FAQs' %}         
