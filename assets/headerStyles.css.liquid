@@ -9,14 +9,14 @@
     position: absolute;
     top: 45px;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     color: #FFF;
 }
 
 .HeaderSection{
     display: grid;
     grid-template-areas: 
-    "iconHeader blocksContent headerOptions"; 
+    "iconHeader blocksContent independientLinks headerOptions"; 
     grid-template-columns: 20% 60% 20%;
     align-items: flex-start;
     justify-items: flex-end;
@@ -83,7 +83,7 @@
     justify-content: stretch;
     position: absolute;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     transition: top 0.5s ease-in-out;
     height: fit-content;
 }
@@ -135,6 +135,7 @@
 .pageList{
     justify-content: center;
     padding-left: 25%;
+    align-items: start;
 }
 .pageItem{
     justify-items: center;
