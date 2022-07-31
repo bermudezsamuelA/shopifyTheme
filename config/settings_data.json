@@ -128,13 +128,21 @@
               "independet_title": "Natural Care Blog",
               "url_independent": "shopify:\/\/blogs\/news"
             }
+          },
+          "a9cc5f1a-2556-4042-9ef1-32be08c7d67d": {
+            "type": "url",
+            "settings": {
+              "independet_title": "Wholesale",
+              "url_independent": "shopify:\/\/collections\/all"
+            }
           }
         },
         "block_order": [
           "a431c9bf-b5d2-4bb3-8819-d2e6607d7bcd",
           "0c1494a4-7048-44bf-9521-cfe468f06e69",
           "cd3efc24-59bd-469f-b799-4d4e229d2c3d",
-          "bda68e81-d210-430e-aeae-7d7741e24353"
+          "bda68e81-d210-430e-aeae-7d7741e24353",
+          "a9cc5f1a-2556-4042-9ef1-32be08c7d67d"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/naturalmums_design-01.png",
