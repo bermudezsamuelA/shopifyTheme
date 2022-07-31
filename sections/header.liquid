@@ -72,7 +72,11 @@
          </ul>
        </div>
     {% endfor %}
-
+  </div>
+  <div class="PagesList hiddeMenu"  id="PagesHeaderSection">
+    {% for page in pages -%}
+      {{ page.title | link_to: page.url }}
+    {%- endfor %}
   </div>
 </div>
 
@@ -93,7 +97,6 @@
       let productsHeaderSection = document.getElementById('productsHeaderSection');
 
       if(iconDown.classList[0] == "iconShow"){
-        console.log('primero if')
         iconDown.classList.remove("iconShow");
         iconDownPage.classList.remove("iconShow");
 
@@ -118,7 +121,6 @@
         productsHeaderSection.classList.add("hiddeMenu")
 
         }else{
-        console.log('segundo if')
 
           iconUp.classList.remove("iconShow");
           iconDown.classList.add("iconShow");
@@ -130,28 +132,23 @@
           iconUpPage.classList.add("iconHidden");
           iconDownPage.classList.remove("iconHidden");
 
-          
-        totalHeader.classList.add("headerClicked");
-        upperHeader.classList.add("upperHeaderBorder");
+            
+          totalHeader.classList.add("headerClicked");
+          upperHeader.classList.add("upperHeaderBorder");
 
-        lowerHeader.classList.add("headerClicked");
-        lowerHeader.classList.add("lowerHeaderMovement");
+          lowerHeader.classList.add("headerClicked");
+          lowerHeader.classList.add("lowerHeaderMovement");
 
-        buttonHeader.classList.add("dropdownButtonBlack");
-        buttonHeaderList.classList.add("dropdownButtonBlack")
+          buttonHeader.classList.add("dropdownButtonBlack");
+          buttonHeaderList.classList.add("dropdownButtonBlack")
 
-        productsHeaderSection.classList.remove("hiddeMenu")
-        productsHeaderSection.classList.add("showMenu")
+          productsHeaderSection.classList.remove("hiddeMenu")
+          productsHeaderSection.classList.add("showMenu")
         }
     }
 
     function pagesConsume(){
-      const url ='/admin/api/2022-07/pages.json'
-      fetch(url)
-      .then((res)=> res.json())
-      .then(({pages})=>{
-        console.log(pages)
-               let iconUp = document.getElementById('productUpIcon')
+      let iconUp = document.getElementById('productUpIcon')
       let iconDown = document.getElementById('productDownIcon')
       let iconUpPage = document.getElementById('pageUpIcon')
       let iconDownPage = document.getElementById('pageDownIcon')
@@ -160,8 +157,9 @@
       let buttonHeader = document.getElementById('buttonHeader');
       let buttonHeaderList = document.getElementById('buttonHeaderList');
       let totalHeader = document.getElementById('header_custom');
+      let PagesHeaderSection = document.getElementById('PagesHeaderSection');
+
       if(iconDown.classList[0] == "iconShow"){
-        console.log('primero if')
         iconDown.classList.remove("iconShow");
         iconDownPage.classList.remove("iconShow");
 
@@ -182,8 +180,10 @@
         buttonHeader.classList.remove("dropdownButtonBlack")
         buttonHeaderList.classList.remove("dropdownButtonBlack")
 
+        PagesHeaderSection.classList.remove("showMenu")
+        PagesHeaderSection.classList.add("hiddeMenu")
+
         }else{
-        console.log('segundo if')
 
           iconUp.classList.remove("iconShow");
           iconDown.classList.add("iconShow");
@@ -205,11 +205,10 @@
           buttonHeader.classList.add("dropdownButtonBlack");
           buttonHeaderList.classList.add("dropdownButtonBlack")
 
+          PagesHeaderSection.classList.remove("hiddeMenu")
+          PagesHeaderSection.classList.add("showMenu")
           }
-
-      })
     }
-     
   }
 </script>
 
