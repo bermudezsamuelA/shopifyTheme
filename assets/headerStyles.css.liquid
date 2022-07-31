@@ -87,6 +87,8 @@
     transition: top 0.5s ease-in-out;
     height: fit-content;
 }
+
+
 /* el menu de los productos */
 .collectionsLists, .pageList{
     grid-template-columns: repeat(auto-fill, minmax(15rem,1fr)); 
@@ -95,7 +97,7 @@
     justify-items: stretch;
     width: 100%;
 }
-.dropdownItem{
+.dropdownItem, .pageItem{
     display: grid;
     grid-template-areas: 
     'imageItem'
@@ -117,7 +119,7 @@
     height: 150px;
     margin-bottom: 1rem;
 }
-.dropdownTitle{
+.dropdownTitle, .pageItemTitle{
     grid-area: titleItem;
     border-bottom: 0.5px solid #BBB;
     font-size: 1.2rem;
@@ -127,10 +129,25 @@
 .dropdownList{
     grid-area: linksItem ;
 }
+
+
 /* menu de las paginas */
 .pageList{
     justify-content: center;
     padding-left: 25%;
+}
+.pageItem{
+    justify-items: center;
+}
+
+.pageItemTitle{
+    border: none;
+    font-weight: bold;
+    color: #F4AB9D;
+}
+.pageItemTitle:hover{
+    color: #D79E93;        
+
 }
 /* display or not icon */
 .iconShow{
