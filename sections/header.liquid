@@ -30,6 +30,12 @@
             <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconShow"  id="pageUpIcon" alt="">
             <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconHidden"  id="pageDownIcon" alt="">
         </div>
+        {% when 'url' %}
+        <div class="descriptionOptions">
+            <button class="dropdownButton" id="buttonHeaderList" onclick="pagesConsume()">
+              {{ element.menu_title }}
+            </button>
+        </div>
       {% endcase %}      
       {% endfor %}
     </div>
@@ -49,7 +55,7 @@
 </div>
   <!-- OPCIONES INFERIORES -->
 <div class="headerMenuOptions lowerHeaderHidden" id="lowerHeaderId">
-  <div class="collectionsLists">
+  <div class="collectionsLists hiddeMenu"  id="productsHeaderSection">
     {% for collection in collections %}
     <div class="dropdownItem">
         <img src="{{- collection.image | img_url: 'medium' }}" alt="" class="dropdownImg">
@@ -76,6 +82,76 @@
   if(document.getElementById('header_custom') != null){
     function productConsume(){
       let iconUp = document.getElementById('productUpIcon')
+      let iconDown = document.getElementById('productDownIcon')
+      let iconUpPage = document.getElementById('pageUpIcon')
+      let iconDownPage = document.getElementById('pageDownIcon')
+      let upperHeader = document.getElementById('UpperHeaderId');
+      let lowerHeader = document.getElementById('lowerHeaderId');
+      let buttonHeader = document.getElementById('buttonHeader');
+      let buttonHeaderList = document.getElementById('buttonHeaderList');
+      let totalHeader = document.getElementById('header_custom');
+      let productsHeaderSection = document.getElementById('productsHeaderSection');
+
+      if(iconDown.classList[0] == "iconShow"){
+        console.log('primero if')
+        iconDown.classList.remove("iconShow");
+        iconDownPage.classList.remove("iconShow");
+
+        iconUpPage.classList.add("iconShow");
+        iconUp.classList.add("iconShow");
+
+        iconDown.classList.add("iconHidden");
+        iconUp.classList.remove("iconHidden");
+        iconDownPage.classList.add("iconHidden");
+        iconUpPage.classList.remove("iconHidden");
+        
+        totalHeader.classList.remove("headerClicked");
+        upperHeader.classList.remove("upperHeaderBorder");
+
+        lowerHeader.classList.remove("headerClicked");
+        lowerHeader.classList.remove("lowerHeaderMovement");
+        
+        buttonHeader.classList.remove("dropdownButtonBlack")
+        buttonHeaderList.classList.remove("dropdownButtonBlack")
+
+        productsHeaderSection.classList.remove("showMenu")
+        productsHeaderSection.classList.add("hiddeMenu")
+
+        }else{
+        console.log('segundo if')
+
+          iconUp.classList.remove("iconShow");
+          iconDown.classList.add("iconShow");
+          iconUpPage.classList.remove("iconShow");
+          iconDownPage.classList.add("iconShow");
+
+          iconUp.classList.add("iconHidden");
+          iconDown.classList.remove("iconHidden");
+          iconUpPage.classList.add("iconHidden");
+          iconDownPage.classList.remove("iconHidden");
+
+          
+        totalHeader.classList.add("headerClicked");
+        upperHeader.classList.add("upperHeaderBorder");
+
+        lowerHeader.classList.add("headerClicked");
+        lowerHeader.classList.add("lowerHeaderMovement");
+
+        buttonHeader.classList.add("dropdownButtonBlack");
+        buttonHeaderList.classList.add("dropdownButtonBlack")
+
+        productsHeaderSection.classList.remove("hiddeMenu")
+        productsHeaderSection.classList.add("showMenu")
+        }
+    }
+
+    function pagesConsume(){
+      const url ='/admin/api/2022-07/pages.json'
+      fetch(url)
+      .then((res)=> res.json())
+      .then(({pages})=>{
+        console.log(pages)
+               let iconUp = document.getElementById('productUpIcon')
       let iconDown = document.getElementById('productDownIcon')
       let iconUpPage = document.getElementById('pageUpIcon')
       let iconDownPage = document.getElementById('pageDownIcon')
@@ -120,47 +196,16 @@
           iconDownPage.classList.remove("iconHidden");
 
           
-        totalHeader.classList.add("headerClicked");
-        upperHeader.classList.add("upperHeaderBorder");
+          totalHeader.classList.add("headerClicked");
+          upperHeader.classList.add("upperHeaderBorder");
 
-        lowerHeader.classList.add("headerClicked");
-        lowerHeader.classList.add("lowerHeaderMovement");
+          lowerHeader.classList.add("headerClicked");
+          lowerHeader.classList.add("lowerHeaderMovement");
 
-        buttonHeader.classList.add("dropdownButtonBlack");
-        buttonHeaderList.classList.add("dropdownButtonBlack")
+          buttonHeader.classList.add("dropdownButtonBlack");
+          buttonHeaderList.classList.add("dropdownButtonBlack")
 
-        }
-    }
-    function pagesConsume(){
-      const url ='/admin/api/2022-07/pages.json'
-      fetch(url)
-      .then((res)=> res.json())
-      .then(({pages})=>{
-        console.log(pages)
-          document.getElementById('dropdownOptionsDiv').innerHTML='';
-          let iconUp = document.getElementById('pageUpIcon');
-          let iconDown = document.getElementById('pageDownIcon');
-          let upperHeader = document.getElementById('UpperHeaderId');
-          let lowerHeader = document.getElementById('lowerHeaderId');
-          if(iconDown.classList[0] == "iconShow"){
-            iconDown.classList.remove("iconShow");
-            iconUp.classList.add("iconShow");
-            iconDown.classList.add("iconHidden");
-            iconUp.classList.remove("iconHidden");
-          }else{
-            iconUp.classList.remove("iconShow");
-            iconDown.classList.add("iconShow");
-            iconUp.classList.add("iconHidden");
-            iconDown.classList.remove("iconHidden");
           }
-        //   blogs.forEach(element => {
-        // console.log(element)
-        //     document.getElementById('blogList').innerHTML+=`
-        //      <li class="itemBlog" >
-        //         ${element.title}
-        //       </li>
-        //     `;
-        //   });
 
       })
     }
