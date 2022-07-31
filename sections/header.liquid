@@ -17,8 +17,8 @@
         <div class="productsList">
             <button class="dropdownButton" id="buttonHeader" onclick="productConsume()">
               {{ element.product_title}}
-              <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconShow"  id="productUpIcon" alt="">
-              <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconHidden" id="productDownIcon" alt="">
+              <img src="{{ section.settings.title_icon_down  | img_url: 'small'}}" class="iconShow"  id="productUpIcon" alt="">
+              <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconHidden" id="productDownIcon" alt="">
               
             </button>  
         </div>
@@ -27,8 +27,8 @@
             <button class="dropdownButton" id="buttonHeader" onclick="pagesConsume()">
               {{ element.menu_title }}
             </button>
-            <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconShow"  id="pageUpIcon" alt="">
-            <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconHidden"  id="pageDownIcon" alt="">
+            <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconShow"  id="pageUpIcon" alt="">
+            <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconHidden"  id="pageDownIcon" alt="">
         </div>
       {% endcase %}      
       {% endfor %}
