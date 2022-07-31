@@ -24,7 +24,7 @@
         </div>
         {% when 'link_list' %}
         <div class="descriptionOptions">
-            <button class="dropdownButton" id="buttonHeader" onclick="pagesConsume()">
+            <button class="dropdownButton" id="buttonHeaderList" onclick="pagesConsume()">
               {{ element.menu_title }}
             </button>
             <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconShow"  id="pageUpIcon" alt="">
@@ -77,18 +77,25 @@
     function productConsume(){
       let iconUp = document.getElementById('productUpIcon')
       let iconDown = document.getElementById('productDownIcon')
+      let iconUpPage = document.getElementById('pageUpIcon')
+      let iconDownPage = document.getElementById('pageDownIcon')
       let upperHeader = document.getElementById('UpperHeaderId');
       let lowerHeader = document.getElementById('lowerHeaderId');
       let buttonHeader = document.getElementById('buttonHeader');
+      let buttonHeaderList = document.getElementById('buttonHeaderList');
       let totalHeader = document.getElementById('header_custom');
       if(iconDown.classList[0] == "iconShow"){
         console.log('primero if')
         iconDown.classList.remove("iconShow");
+        iconDownPage.classList.remove("iconShow");
+
+        iconUpPage.classList.add("iconShow");
         iconUp.classList.add("iconShow");
 
         iconDown.classList.add("iconHidden");
         iconUp.classList.remove("iconHidden");
-
+        iconDownPage.classList.add("iconHidden");
+        iconUpPage.classList.remove("iconHidden");
         
         totalHeader.classList.remove("headerClicked");
         upperHeader.classList.remove("upperHeaderBorder");
@@ -97,16 +104,20 @@
         lowerHeader.classList.remove("lowerHeaderMovement");
         
         buttonHeader.classList.remove("dropdownButtonBlack")
-
+        buttonHeaderList.classList.remove("dropdownButtonBlack")
 
         }else{
         console.log('segundo if')
 
           iconUp.classList.remove("iconShow");
           iconDown.classList.add("iconShow");
+          iconUpPage.classList.remove("iconShow");
+          iconDownPage.classList.add("iconShow");
 
           iconUp.classList.add("iconHidden");
           iconDown.classList.remove("iconHidden");
+          iconUpPage.classList.add("iconHidden");
+          iconDownPage.classList.remove("iconHidden");
 
           
         totalHeader.classList.add("headerClicked");
@@ -116,6 +127,8 @@
         lowerHeader.classList.add("lowerHeaderMovement");
 
         buttonHeader.classList.add("dropdownButtonBlack");
+        buttonHeaderList.classList.add("dropdownButtonBlack")
+
         }
     }
     function pagesConsume(){
