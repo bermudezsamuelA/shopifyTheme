@@ -88,12 +88,17 @@
     {% endfor %}
   </div>
   <div class="pageList hiddeMenu"  id="PagesHeaderSection">
-    {% assign element2 = section.blocks.settings[0] %}
+    {% for block in section.blocks %}
+    {% if block.type == "link_list" %}
+      {% assign element2 = block.settings %}      
+    {% endif %}
+    {% endfor %}
+
     {% for page in pages -%}
       {% case page.title %}
         {% when 'Our Story' %}
         <div class="pageItem">
-          <img src="{{- element.us_logo_img | img_url: 'medium' }}" alt="" class="dropdownImg">
+          <img src="{{- element2.us_logo_img | img_url: 'medium' }}" alt="" class="dropdownImg">
             <a class="pageItemTitle"  href="{{ page.url }}">
               {{ element.menu_title}}
               About Natural Mums
