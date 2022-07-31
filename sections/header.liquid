@@ -80,6 +80,7 @@
       let upperHeader = document.getElementById('UpperHeaderId');
       let lowerHeader = document.getElementById('lowerHeaderId');
       let buttonHeader = document.getElementById('buttonHeader');
+      let totalHeader = document.getElementById('header_custom')
       if(iconDown.classList[0] == "iconShow"){
         console.log('primero if')
         iconDown.classList.remove("iconShow");
@@ -88,7 +89,7 @@
         iconDown.classList.add("iconHidden");
         iconUp.classList.remove("iconHidden");
 
-        upperHeader.classList.add("headerClicked");
+        totalHeader.classList.add("headerClicked");
         upperHeader.classList.add("upperHeaderBorder");
 
         lowerHeader.classList.add("headerClicked");
@@ -104,7 +105,7 @@
           iconUp.classList.add("iconHidden");
           iconDown.classList.remove("iconHidden");
 
-          upperHeader.classList.remove("headerClicked");
+          totalHeader.classList.remove("headerClicked");
           upperHeader.classList.remove("upperHeaderBorder");
 
           lowerHeader.classList.remove("headerClicked");
