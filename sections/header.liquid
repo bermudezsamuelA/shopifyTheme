@@ -48,7 +48,7 @@
 
 </div>
   <!-- OPCIONES INFERIORES -->
-<div class="headerMenuOptions" id="lowerHeaderId">
+<div class="headerMenuOptions lowerHeaderHidden" id="lowerHeaderId">
   <div class="collectionsLists">
     {% for collection in collections %}
     <div class="dropdownItem">
@@ -66,7 +66,7 @@
          </ul>
        </div>
     {% endfor %}
-    
+
   </div>
 </div>
 
@@ -81,6 +81,7 @@
       let lowerHeader = document.getElementById('lowerHeaderId');
       let buttonHeader = document.getElementById('buttonHeader');
       if(iconDown.classList[0] == "iconShow"){
+        console.log('primero if')
         iconDown.classList.remove("iconShow");
         iconUp.classList.add("iconShow");
 
@@ -95,6 +96,8 @@
         buttonHeader.classList.add("dropdownButtonBlack")
 
         }else{
+        console.log('segundo if')
+
           iconUp.classList.remove("iconShow");
           iconDown.classList.add("iconShow");
 
