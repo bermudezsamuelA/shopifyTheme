@@ -30,12 +30,6 @@
             <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconShow"  id="pageUpIcon" alt="">
             <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconHidden"  id="pageDownIcon" alt="">
         </div>
-        {% when 'url' %}
-        <div class="descriptionOptions">
-            <button class="dropdownButton" id="buttonHeaderList" onclick="pagesConsume()">
-              {{ element.menu_title }}
-            </button>
-        </div>
       {% endcase %}      
       {% endfor %}
     </div>
@@ -49,7 +43,6 @@
                   {{ element.independet_title}}            
                 </a>  
             </div>
-      
       {% endcase %}      
       {% endfor %}
     </div>
