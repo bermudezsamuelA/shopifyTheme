@@ -39,14 +39,14 @@
       {% endcase %}      
       {% endfor %}
     </div>
-    <div class="independientLinks">
+    <div class="independentLinks">
       {% for block in section.blocks %}
       {% assign element = block.settings %}
       {% case block.type %}
       {% when 'url' %}
-        <div class="independientLinkList">
-            <a class="independientLinkTitle" id="" >
-              {{ element.product_title}}            
+        <div class="independentLinkList">
+            <a class="independentLinkTitle" id="" >
+              {{ element.independet_title}}            
             </a>  
         </div>
       
@@ -342,6 +342,22 @@
             "default": "All Natural Products"
           }
         ]
+      },
+      {
+       "type": "url",
+       "name": "links_independent",
+      "settings": [
+          {
+            "type": "text",
+            "id": "independet_title",
+            "label": "title Link"
+          }
+          {
+            "type": "url",
+            "id": "url_independent",
+            "label": "Link"
+          }
+      ]
       }
     ]
   }
