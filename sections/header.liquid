@@ -15,7 +15,7 @@
       {% case block.type %}
       {% when 'product' %}
         <div class="productsList">
-            <button class="dropdownButton" onclick="productConsume()">
+            <button class="dropdownButton" id="buttonHeader" onclick="productConsume()">
               {{ element.product_title}}
               <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconShow"  id="productUpIcon" alt="">
               <img src="{{ section.settings.title_icon_down | img_url: 'small'}}" class="iconHidden" id="productDownIcon" alt="">
@@ -24,7 +24,7 @@
         </div>
         {% when 'link_list' %}
         <div class="descriptionOptions">
-            <button class="dropdownButton" onclick="pagesConsume()">
+            <button class="dropdownButton" id="buttonHeader" onclick="pagesConsume()">
               {{ element.menu_title }}
             </button>
             <img src="{{ section.settings.title_icon_up | img_url: 'small'}}" class="iconShow"  id="pageUpIcon" alt="">
@@ -78,6 +78,7 @@
       let iconDown = document.getElementById('productDownIcon')
       let upperHeader = document.getElementById('UpperHeaderId');
       let lowerHeader = document.getElementById('lowerHeaderId');
+      let buttonHeader = document.getElementById('buttonHeader');
       if(iconDown.classList[0] == "iconShow"){
         iconDown.classList.remove("iconShow");
         iconUp.classList.add("iconShow");
@@ -90,7 +91,7 @@
 
         lowerHeader.classList.add("headerClicked");
         lowerHeader.classList.add("lowerHeaderMovement");
-
+        buttonHeader.classList.add("dropdownButtonBlack")
 
         }else{
           iconUp.classList.remove("iconShow");
@@ -104,6 +105,8 @@
 
           lowerHeader.classList.remove("headerClicked");
           lowerHeader.classList.remove("lowerHeaderMovement");
+          
+          buttonHeader.classList.remove("dropdownButtonBlack")
 
         }
     }
