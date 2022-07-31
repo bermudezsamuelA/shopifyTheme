@@ -109,7 +109,10 @@
           "0c1494a4-7048-44bf-9521-cfe468f06e69": {
             "type": "link_list",
             "settings": {
-              "menu_title": "Our Story"
+              "menu_title": "Our Story",
+              "us_logo_img": "shopify:\/\/shop_images\/PHOTO-20.jpg",
+              "ingredient_logo_img": "shopify:\/\/shop_images\/josefin-dIEa0BytZ_g-unsplash.jpg",
+              "fqa_logo_img": "shopify:\/\/shop_images\/woman-doing-facial-mask-3212179.jpg"
             }
           }
         },
