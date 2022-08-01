@@ -148,6 +148,12 @@
           "logo": "shopify:\/\/shop_images\/naturalmums_design-01.png",
           "logo_width": 220,
           "enable_sticky": true,
+          "user_logo_white": "shopify:\/\/shop_images\/baseline_person_outline_white_24dp.png",
+          "user_logo_black": "shopify:\/\/shop_images\/baseline_person_outline_black_24dp.png",
+          "search_logo_white": "shopify:\/\/shop_images\/baseline_search_white_24dp.png",
+          "search_logo_black": "shopify:\/\/shop_images\/baseline_search_black_24dp.png",
+          "cart_logo_white": "shopify:\/\/shop_images\/baseline_shopping_cart_white_24dp.png",
+          "cart_logo_black": "shopify:\/\/shop_images\/baseline_shopping_cart_black_24dp.png",
           "title_icon_down": "shopify:\/\/shop_images\/baseline_expand_more_white_24dp.png",
           "title_icon_up": "shopify:\/\/shop_images\/baseline_expand_more_black_24dp.png"
         }
