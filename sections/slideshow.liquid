@@ -2,7 +2,7 @@
   class="HeroSection" 
   id="HeroSectionId" 
   {% if section.settings.image %}
-    style="background-image:url({{section.settings.image}});"
+    style="background-image:url({{section.settings.image  | img_url: 'medium' }});"
   {% endif %}
   >
   <div class="HeroTextContainer">
