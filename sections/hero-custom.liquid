@@ -1,0 +1,57 @@
+<div 
+  class="heroSection" 
+  id="HeroSectionId" 
+  {% if section.settings.image %}
+    style="background-image:url({{section.settings.image  | img_url: 'medium' }});"
+  {% endif %}
+  >
+  <div class="HeroTextContainer">
+    <h1 class="heroTitle">
+      {{ section.settings.title }}
+    </h1>
+    <h1 class="heroSubtitle">
+      {{ section.settings.subtitle }}
+
+    </h1>
+    <button class="heroButtton">
+      {{ section.settings.button_label }}
+    </button>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "HeroCustom",
+    "class": "banner-candidate",
+    "settings": [
+      {
+          "type": "image_picker",
+          "id": "image",
+          "label":"Heading Background image"
+      },
+      {
+          "type": "text",
+          "id": "title",
+          "label":"Heading Title",
+          "default": "Natural Product for You"
+      },
+      {
+          "type": "text",
+          "id": "subtitle",
+          "label":"Heading subtitle",
+          "default": "and your little one"
+      },
+      {
+          "type": "text",
+          "id": "button_label",
+          "label":"Heading Button Label",
+          "default": "Shop Our Creams"
+      },
+      {
+          "type": "url",
+          "id": "button_link",
+          "label":"Heading Button Link"
+      }
+    ]
+  }
+{% endschema %}
