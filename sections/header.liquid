@@ -48,13 +48,25 @@
     </div>
     <div class="headerOptions">
       <div class="user">
-  
+        <a class="nav-link" href="{{ routes.account_url }}">
+          <img src="{{ section.settings.user_logo_white  | img_url: 'small'}}" class="iconShow userWhite"  id="productUpIcon" alt="">
+          <img src="{{ section.settings.user_logo_black | img_url: 'small'}}" class="iconHidden userBlack" id="productDownIcon" alt="">
+        </a>
       </div>
       <div class="search">
-  
+        <form action="/search" method="GET" role="search">
+          <input type="text" name="q" id="" value="{{search.terms | escape}}">
+          <button type="submit"> 
+            <img src="{{ section.settings.search_logo_white  | img_url: 'small'}}" class="iconShow"  id="productUpIcon" alt="">
+            <img src="{{ section.settings.search_logo_black | img_url: 'small'}}" class="iconHidden" id="productDownIcon" alt="">
+          </button>
+        </form>
       </div>
       <div class="cart">
-  
+        <a class="nav-link" href="/cart">
+          <img src="{{ section.settings.cart_logo_white  | img_url: 'small'}}" class="iconShow"  id="productUpIcon" alt="">
+          <img src="{{ section.settings.cart_logo_black | img_url: 'small'}}" class="iconHidden" id="productDownIcon" alt="">
+        </a>
       </div>
     </div>
   </div>
@@ -280,18 +292,33 @@
       },
       {
         "type": "image_picker",
-        "id": "user_logo",
-        "label": "User logo"
+        "id": "user_logo_white",
+        "label": "User logo white"
       },
       {
         "type": "image_picker",
-        "id": "search_logo",
-        "label": "Search logo"
+        "id": "user_logo_black",
+        "label": "User logo black"
       },
       {
         "type": "image_picker",
-        "id": "cart_logo",
-        "label": "Cart logo"
+        "id": "search_logo_white",
+        "label": "Search logo white"
+      },
+      {
+        "type": "image_picker",
+        "id": "search_logo_black",
+        "label": "Search logo black"
+      },
+      {
+        "type": "image_picker",
+        "id": "cart_logo_white",
+        "label": "Cart logo white"
+      },
+      {
+        "type": "image_picker",
+        "id": "cart_logo_black",
+        "label": "Cart logo black"
       },
       {
         "type": "image_picker",
