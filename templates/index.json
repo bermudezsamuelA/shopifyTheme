@@ -149,84 +149,11 @@
         "slide_show_mobile_arrows": true
       }
     },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial-0": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Add customer reviews or press releases to showcase your store's happy customers.",
-            "link": "",
-            "author_name": "Author's name"
-          }
-        },
-        "testimonial-1": {
-          "type": "testimonial",
-          "settings": {
-            "star_rating": 5,
-            "testimonial": "Add customer reviews or press releases to showcase your store's happy customers.",
-            "link": "",
-            "author_name": "Author's name"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial-0",
-        "testimonial-1"
-      ],
-      "settings": {
-        "title": "Testimonials",
-        "autoplay": false,
-        "logo_height": 40
-      }
-    },
-    "video": {
-      "type": "video",
-      "blocks": {
-        "block-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Video",
-            "heading_size": "h2"
-          }
-        },
-        "block-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with a video to draw attention to an important detail of your brand or product line.<\/p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "block-0",
-        "block-1"
-      ],
-      "settings": {
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "skip_container": false,
-        "tint_color": "#000000",
-        "tint_opacity": 0,
-        "text_box_style": "none",
-        "text_bg_color": "#000000",
-        "text_bg_opacity": 50,
-        "text_color": "#ffffff",
-        "text_position": "center center",
-        "text_below_mobile": false
-      }
-    },
-    "featured-blog": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "",
-        "blog": ""
-      }
-    },
     "image-with-text": {
       "type": "image-with-text",
       "settings": {
         "skip_container": false,
+        "image": "shopify:\/\/shop_images\/jonathan-borba-VCjhp_UHk2w-unsplash_1c8b9d97-8104-48b3-8e56-5f728e5a48b1.jpg",
         "layout": "left",
         "heading": "Image with text",
         "text": "<p>Pair text with an image to give focus to a selected product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
@@ -249,9 +176,6 @@
     "featured-collection",
     "image-gallery",
     "slideshow-with-text",
-    "testimonials",
-    "video",
-    "featured-blog",
     "image-with-text"
   ]
 }
