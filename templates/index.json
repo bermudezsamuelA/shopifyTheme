@@ -10,44 +10,6 @@
         "button_link": ""
       }
     },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "block-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Rich text"
-          }
-        },
-        "block-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe product, share announcements, or welcome customers to your store.<\/p>",
-            "text_size": 100
-          }
-        },
-        "block-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Some link",
-            "button_link": "shopify:\/\/pages\/contact-us",
-            "button_style": "feature-link"
-          }
-        }
-      },
-      "block_order": [
-        "block-0",
-        "block-1",
-        "block-2"
-      ],
-      "settings": {
-        "text_alignment": "center",
-        "color_scheme": "scheme-1",
-        "color_bg": "",
-        "color_heading": "",
-        "color_text": ""
-      }
-    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -148,34 +110,12 @@
         "autoplay_speed": 5,
         "slide_show_mobile_arrows": true
       }
-    },
-    "image-with-text": {
-      "type": "image-with-text",
-      "settings": {
-        "skip_container": false,
-        "image": "shopify:\/\/shop_images\/jonathan-borba-VCjhp_UHk2w-unsplash_1c8b9d97-8104-48b3-8e56-5f728e5a48b1.jpg",
-        "layout": "left",
-        "heading": "Image with text",
-        "text": "<p>Pair text with an image to give focus to a selected product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
-        "button_text": "Shop",
-        "button_link": "",
-        "button_style": "button button--alt",
-        "text_alignment": "left",
-        "text_center_mobile": true,
-        "bg_style": "content",
-        "color_scheme": "scheme-2",
-        "color_bg": "",
-        "color_heading": "",
-        "color_text": ""
-      }
     }
   },
   "order": [
     "slideshow",
-    "rich-text",
     "featured-collection",
     "image-gallery",
-    "slideshow-with-text",
-    "image-with-text"
+    "slideshow-with-text"
   ]
 }
