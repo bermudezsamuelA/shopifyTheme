@@ -2,45 +2,12 @@
   "sections": {
     "slideshow": {
       "type": "slideshow",
-      "blocks": {
-        "slide-0": {
-          "type": "image",
-          "settings": {
-            "image_desktop": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/jonathan-borba-VCjhp_UHk2w-unsplash.jpg",
-            "image_align_desktop": "center",
-            "image_align_mobile": "center",
-            "text_position": "center center",
-            "heading": "Slideshow",
-            "heading_size": "h1",
-            "text": "<p>Pair text with an image to tell a story<\/p>",
-            "enlarge_text": false,
-            "button_1_text": "See more",
-            "button_1_url": "",
-            "button_2_text": "Shop now",
-            "button_2_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "slide-0"
-      ],
       "settings": {
-        "size": "full_fixed",
-        "height_desktop": 700,
-        "height_mobile": 460,
-        "enable_split": false,
-        "tint_color": "#000000",
-        "tint_opacity": 20,
-        "text_box_style": "none",
-        "text_bg_color": "#000000",
-        "text_bg_opacity": 50,
-        "text_color": "#ffffff",
-        "text_below_mobile": false,
-        "slide_mode": "slide",
-        "autoplay": true,
-        "autoplay_speed": 5,
-        "show_mobile_arrows": true
+        "image": "shopify:\/\/shop_images\/jonathan-borba-VCjhp_UHk2w-unsplash_1c8b9d97-8104-48b3-8e56-5f728e5a48b1.jpg",
+        "title": "Natural Product for You",
+        "subtitle": "and your little one",
+        "button_label": "Shop Our Creams",
+        "button_link": ""
       }
     },
     "rich-text": {
