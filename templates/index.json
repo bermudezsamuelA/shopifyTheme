@@ -32,6 +32,8 @@
         "1659378088026f543c-2"
       ],
       "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/bannerHero.png",
+        "image_mobile": "shopify:\/\/shop_images\/jonathan-borba-VCjhp_UHk2w-unsplash_1c8b9d97-8104-48b3-8e56-5f728e5a48b1.jpg",
         "image_align_desktop": "center",
         "image_align_mobile": "center",
         "tint_color": "#000000",
