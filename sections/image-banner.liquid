@@ -199,9 +199,18 @@
                 </h2>
               {%- endif -%}
             {%- when 'text' -%}
-              <div class="text-overlay__text{% if block.settings.enlarge_text %} large-text{% endif %} rte" data-cc-animate-delay="0.2s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
+              <!-- <div class="text-overlay__text{% if block.settings.enlarge_text %} large-text{% endif %} rte" data-cc-animate-delay="0.2s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                 {{ block.settings.text }}
-              </div>
+              </div> -->
+              {%- if block.settings.subheading_h1 -%}
+                <h1 class="text-overlay__heading {{ block.settings.sunheading_size }}" data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
+                  {{- block.settings.text | newline_to_br -}}
+                </h1>
+              {%- else -%}
+                <h2 class="text-overlay__heading {{ block.settings.sunheading_size }}" data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
+                  {{- block.settings.text | newline_to_br -}}
+                </h2>
+              {%- endif -%}
             {%- when 'button' -%}
               <div class="text-overlay__link" data-cc-animate-delay="0.3s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                 <a class="button button--hollow" {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}>
@@ -506,15 +515,36 @@
         "limit": 1,
         "settings": [
           {
-            "type": "richtext",
+            "type": "text",
             "id": "text",
             "label": "Text",
-            "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "default": ""
+          },
+          {
+            "type": "select",
+            "id": "sunheading_size",
+            "label": "Heading size",
+            "options": [
+              {
+                "value": "h2",
+                "label": "Small"
+              },
+              {
+                "value": "h1",
+                "label": "Medium"
+              },
+              {
+                "value": "h0",
+                "label": "Large"
+              }
+            ],
+            "default": "h1"         
           },
           {
             "type": "checkbox",
-            "id": "enlarge_text",
-            "label": "Enlarge text",
+            "id": "subheading_h1",
+            "label": "Set as page heading (uses h1 tag)",
+            "info": "For optimum SEO, a page should only have one h1 and it should be the first heading on the page.",
             "default": false
           }
         ]
