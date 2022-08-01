@@ -2,11 +2,16 @@
   "sections": {
     "hero": {
       "type": "hero-banner",
-      "settings": {}
+      "settings": {
+        "bg_style": "image",
+        "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
+        "image_align": "center"
+      }
     },
     "main": {
       "type": "main-page",
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
