@@ -49,23 +49,23 @@
     <div class="headerOptions">
       <div class="user">
         <a class="nav-link" href="{{ routes.account_url }}">
-          <img src="{{ section.settings.user_logo_white  | img_url: 'small'}}" class="iconShow userWhite"  id="productUpIcon" alt="">
-          <img src="{{ section.settings.user_logo_black | img_url: 'small'}}" class="iconHidden userBlack" id="productDownIcon" alt="">
+          <img src="{{ section.settings.user_logo_white  | img_url: 'small'}}" class="iconShow userWhite"  id="userWhite" alt="">
+          <img src="{{ section.settings.user_logo_black | img_url: 'small'}}" class="iconHidden userBlack" id="userBlack" alt="">
         </a>
       </div>
       <div class="search">
         <form action="/search" method="GET" role="search">
           <input type="text" name="q" id="" value="{{search.terms | escape}}">
           <button type="submit"> 
-            <img src="{{ section.settings.search_logo_white  | img_url: 'small'}}" class="iconShow"  id="productUpIcon" alt="">
-            <img src="{{ section.settings.search_logo_black | img_url: 'small'}}" class="iconHidden" id="productDownIcon" alt="">
+            <img src="{{ section.settings.search_logo_white  | img_url: 'small'}}" class="iconShow"  id="searchWhite" alt="">
+            <img src="{{ section.settings.search_logo_black | img_url: 'small'}}" class="iconHidden" id="searchBlack" alt="">
           </button>
         </form>
       </div>
       <div class="cart">
         <a class="nav-link" href="/cart">
-          <img src="{{ section.settings.cart_logo_white  | img_url: 'small'}}" class="iconShow"  id="productUpIcon" alt="">
-          <img src="{{ section.settings.cart_logo_black | img_url: 'small'}}" class="iconHidden" id="productDownIcon" alt="">
+          <img src="{{ section.settings.cart_logo_white  | img_url: 'small'}}" class="iconShow"  id="cartWhite" alt="">
+          <img src="{{ section.settings.cart_logo_black | img_url: 'small'}}" class="iconHidden" id="cartBlack" alt="">
         </a>
       </div>
     </div>
@@ -147,15 +147,36 @@
       let totalHeader = document.getElementById('header_custom');
       let productsHeaderSection = document.getElementById('productsHeaderSection');
 
+      let userWhite = document.getElementById('userWhite');
+      let userBlack = document.getElementById('userBlack');
+      let searchWhite = document.getElementById('searchWhite');
+      let searchBlack = document.getElementById('searchBlack');
+      let cartWhite = document.getElementById('cartWhite');
+      let cartBlack = document.getElementById('cartBlack');
+
       if(iconDown.classList[0] == "iconShow"){
         iconDown.classList.remove("iconShow");
+        userWhite.classList.remove("iconShow");
+        searchWhite.classList.remove("iconShow");
+        cartWhite.classList.remove("iconShow");
         iconDownPage.classList.remove("iconShow");
 
         iconUpPage.classList.add("iconShow");
         iconUp.classList.add("iconShow");
+        userBlack.classList.add("iconShow");
+        searchBlack.classList.add("iconShow");
+        cartBlack.classList.add("iconShow");
 
         iconDown.classList.add("iconHidden");
+        userWhite.classList.add("iconHidden");
+        searchWhite.classList.add("iconHidden");
+        cartWhite.classList.add("iconHidden");
+
         iconUp.classList.remove("iconHidden");
+        userBlack.classList.remove("iconHidden");
+        searchBlack.classList.remove("iconHidden");
+        cartBlack.classList.remove("iconHidden");
+
         iconDownPage.classList.add("iconHidden");
         iconUpPage.classList.remove("iconHidden");
         
@@ -173,12 +194,31 @@
         }else{
 
           iconUp.classList.remove("iconShow");
+
+          userBlack.classList.remove("iconShow");
+          searchBlack.classList.remove("iconShow");
+          cartBlack.classList.remove("iconShow");
+
           iconDown.classList.add("iconShow");
+          
+          userWhite.classList.add("iconShow");
+          searchWhite.classList.add("iconShow");
+          cartWhite.classList.add("iconShow");
+
           iconUpPage.classList.remove("iconShow");
           iconDownPage.classList.add("iconShow");
 
           iconUp.classList.add("iconHidden");
+          userBlack.classList.add("iconHidden");
+          searchBlack.classList.add("iconHidden");
+          cartBlack.classList.add("iconHidden");
+
           iconDown.classList.remove("iconHidden");
+
+          userWhite.classList.remove("iconHidden");
+          searchWhite.classList.remove("iconHidden");
+          cartWhite.classList.remove("iconHidden");
+
           iconUpPage.classList.add("iconHidden");
           iconDownPage.classList.remove("iconHidden");
 
@@ -208,15 +248,36 @@
       let totalHeader = document.getElementById('header_custom');
       let PagesHeaderSection = document.getElementById('PagesHeaderSection');
 
+      let userWhite = document.getElementById('userWhite');
+      let userBlack = document.getElementById('userBlack');
+      let searchWhite = document.getElementById('searchWhite');
+      let searchBlack = document.getElementById('searchBlack');
+      let cartWhite = document.getElementById('cartWhite');
+      let cartBlack = document.getElementById('cartBlack');
+
       if(iconDown.classList[0] == "iconShow"){
         iconDown.classList.remove("iconShow");
+        userWhite.classList.remove("iconShow");
+        searchWhite.classList.remove("iconShow");
+        cartWhite.classList.remove("iconShow");
         iconDownPage.classList.remove("iconShow");
 
         iconUpPage.classList.add("iconShow");
         iconUp.classList.add("iconShow");
+        userBlack.classList.add("iconShow");
+        searchBlack.classList.add("iconShow");
+        cartBlack.classList.add("iconShow");
 
         iconDown.classList.add("iconHidden");
+        userWhite.classList.add("iconHidden");
+        searchWhite.classList.add("iconHidden");
+        cartWhite.classList.add("iconHidden");
+
         iconUp.classList.remove("iconHidden");
+        userBlack.classList.remove("iconHidden");
+        searchBlack.classList.remove("iconHidden");
+        cartBlack.classList.remove("iconHidden");
+
         iconDownPage.classList.add("iconHidden");
         iconUpPage.classList.remove("iconHidden");
         
@@ -234,16 +295,34 @@
         }else{
 
           iconUp.classList.remove("iconShow");
+
+          userBlack.classList.remove("iconShow");
+          searchBlack.classList.remove("iconShow");
+          cartBlack.classList.remove("iconShow");
+
           iconDown.classList.add("iconShow");
+          
+          userWhite.classList.add("iconShow");
+          searchWhite.classList.add("iconShow");
+          cartWhite.classList.add("iconShow");
+
           iconUpPage.classList.remove("iconShow");
           iconDownPage.classList.add("iconShow");
 
           iconUp.classList.add("iconHidden");
+          userBlack.classList.add("iconHidden");
+          searchBlack.classList.add("iconHidden");
+          cartBlack.classList.add("iconHidden");
+
           iconDown.classList.remove("iconHidden");
+
+          userWhite.classList.remove("iconHidden");
+          searchWhite.classList.remove("iconHidden");
+          cartWhite.classList.remove("iconHidden");
+
           iconUpPage.classList.add("iconHidden");
           iconDownPage.classList.remove("iconHidden");
 
-          
           totalHeader.classList.add("headerClicked");
 
           lowerHeader.classList.add("headerClicked");
