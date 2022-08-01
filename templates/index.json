@@ -1,25 +1,5 @@
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
-      "settings": {
-        "size": "full-fixed",
-        "height_desktop": 700,
-        "height_mobile": 400,
-        "enable_split": false,
-        "tint_color": "#000000",
-        "tint_opacity": 20,
-        "text_box_style": "none",
-        "text_bg_color": "#000000",
-        "text_bg_opacity": 50,
-        "text_color": "#ffffff",
-        "text_below_mobile": false,
-        "slide_mode": "slide",
-        "autoplay": true,
-        "autoplay_speed": 5,
-        "show_mobile_arrows": true
-      }
-    },
     "16593780883f1c1917": {
       "type": "image-banner",
       "blocks": {
@@ -69,7 +49,6 @@
     }
   },
   "order": [
-    "slideshow",
     "16593780883f1c1917"
   ]
 }
