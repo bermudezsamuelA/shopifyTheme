@@ -2523,7 +2523,11 @@ tfoot {
   flex-direction: column;
   max-width: 580px;
   background-color: {{ col_card_bg }};
-  color: {{ col_card_text }};
+  color: #F4AB9D;
+  border: none;
+  border-radius: 0;
+  font-weight: bold;
+
 }
 
 .card--padded {
@@ -2555,7 +2559,7 @@ tfoot {
 .card__content {
   flex: 1 1 auto;
   padding: {{ card_info_padding }};
-  text-align: left;
+  text-align: center;
 }
 
 h3.card__title {
@@ -2566,7 +2570,9 @@ h3.card__title {
   font-weight: inherit;
   text-transform: none;
 }
-
+.card__link:hover{
+  color: #D79E93;
+}
 .card__link::after {
   content: "";
   position: absolute;
