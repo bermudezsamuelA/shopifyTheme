@@ -64,11 +64,53 @@
           "settings": {
             "product": "activated-charcoal-soap"
           }
+        },
+        "ec212981-b254-4fc9-9932-fa4e1ecf4626": {
+          "type": "product",
+          "settings": {
+            "product": "honey-oatmeal"
+          }
+        },
+        "338f3882-e74c-4f0c-9cb6-a76855560a9b": {
+          "type": "product",
+          "settings": {
+            "product": "toasty-coffee-soap"
+          }
+        },
+        "6a8b462b-546e-4e99-b3f9-d8372c68b509": {
+          "type": "product",
+          "settings": {
+            "product": "tumeric-soap"
+          }
+        },
+        "d33b5345-abe5-43fe-bf99-6f20aab71825": {
+          "type": "product",
+          "settings": {
+            "product": "natural-deodrant-balm"
+          }
+        },
+        "b854741d-a8c9-446c-ab3b-2c22510a2b98": {
+          "type": "product",
+          "settings": {
+            "product": "ultimate-moisturizer"
+          }
+        },
+        "1dcd6cb7-6170-4fef-83aa-a0585d4f6671": {
+          "type": "product",
+          "settings": {
+            "product": "mum-baby-balm"
+          }
         }
       },
       "block_order": [
         "59d37270-98b8-48f8-b283-1700e44a6ac6",
-        "824e4076-c839-41d4-8f6e-e11765576ebe"
+        "824e4076-c839-41d4-8f6e-e11765576ebe",
+        "ec212981-b254-4fc9-9932-fa4e1ecf4626",
+        "338f3882-e74c-4f0c-9cb6-a76855560a9b",
+        "6a8b462b-546e-4e99-b3f9-d8372c68b509",
+        "d33b5345-abe5-43fe-bf99-6f20aab71825",
+        "b854741d-a8c9-446c-ab3b-2c22510a2b98",
+        "1dcd6cb7-6170-4fef-83aa-a0585d4f6671"
       ],
       "settings": {
         "title": "Slidebar Products list",
