@@ -49,9 +49,17 @@
         "text_position": "center center",
         "text_below_mobile": false
       }
+    },
+    "1659407512070d6907": {
+      "type": "collection-list",
+      "settings": {
+        "title": "Collection list",
+        "collections_per_row_int": 4
+      }
     }
   },
   "order": [
-    "16593780883f1c1917"
+    "16593780883f1c1917",
+    "1659407512070d6907"
   ]
 }
