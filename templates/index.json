@@ -50,6 +50,14 @@
         "text_below_mobile": false
       }
     },
+    "1659455821d39b3398": {
+      "type": "slider-bar-products",
+      "settings": {
+        "title": "Slidebar Products list",
+        "subtitle": "subtitle",
+        "collections_per_row_int": 4
+      }
+    },
     "1659407512070d6907": {
       "type": "collection-list",
       "blocks": {
@@ -93,6 +101,7 @@
   },
   "order": [
     "16593780883f1c1917",
+    "1659455821d39b3398",
     "1659407512070d6907"
   ]
 }
