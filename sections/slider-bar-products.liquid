@@ -18,14 +18,9 @@
             if settings.coll_card_image_ratio == 'shortest'
               assign aspect_ratio = 0
               for block in section.blocks
-                assign collection = collections[block.settings.collection]
-                if collection != blank
-                  if settings.coll_card_image_src == 'product'
-                    assign coll_image = collection.products.first.featured_media.preview_image
-                  else
-                    assign coll_image = collection.featured_image
-                  endif
-  
+                assign product = products[block.settings.product] 
+                if product != blank
+                    assign coll_image = product.featured_image
                   if coll_image.aspect_ratio > aspect_ratio
                     assign aspect_ratio = coll_image.aspect_ratio
                   endif
@@ -34,14 +29,9 @@
             elsif settings.coll_card_image_ratio == 'tallest'
               assign aspect_ratio = 99
               for block in section.blocks
-                assign collection = collections[block.settings.collection]
-                if collection != blank
-                  if settings.coll_card_image_src == 'product'
-                    assign coll_image = collection.products.first.featured_media.preview_image
-                  else
-                    assign coll_image = collection.featured_image
-                  endif
-  
+                assign product = products[block.settings.product] 
+                if product != blank
+                    assign coll_image = product.featured_image
                   if coll_image.aspect_ratio < aspect_ratio
                     assign aspect_ratio = coll_image.aspect_ratio
                   endif
@@ -52,35 +42,31 @@
             endif
           -%}
           {%- for block in section.blocks -%}
-            {%- assign collection = collections[block.settings.collection] -%}
-            {%- unless collection == blank -%}
+            {%- assign product = products[block.settings.product] -%}
+            {%- unless product == blank -%}
               {%- liquid
-                if settings.coll_card_image_src == 'product'
-                  assign coll_image = collection.products.first.featured_media.preview_image
-                else
-                  assign coll_image = collection.featured_image
-                endif
+                assign coll_image = product.featured_image
               -%}
-              {% render 'collection-card',
-                collection: collection,
-                image: coll_image,
-                aspect_ratio: aspect_ratio,
-                items_per_row: section.settings.collections_per_row_int,
-                animate: forloop.index
-              %}
+              {% render 'product-card',
+              product: product,
+              aspect_ratio: aspect_ratio,
+              grid_show_vendor: false,
+              items_per_row: section.settings.products_per_row_int,
+              animate: forloop.index
+              %}  
             {%- else -%}
               {% render 'onboarding-card',
                 aspect_ratio: aspect_ratio,
-                items_per_row: section.settings.collections_per_row_int,
-                is_product: false
+                items_per_row: section.settings.products_per_row_int,
+                is_product: true
               %}
             {%- endunless -%}
           {%- endfor -%}
         {%- else -%}
-          {%- for i in (1..section.settings.collections_per_row_int) -%}
+          {%- for i in (1..section.settings.products_per_row_int) -%}
             {% render 'onboarding-card',
-              items_per_row: section.settings.collections_per_row_int,
-              is_product: false
+              items_per_row: section.settings.products_per_row_int,
+              is_product: true
             %}
           {%- endfor -%}
         {%- endif -%}
@@ -106,14 +92,14 @@
           "default": "subtitle"
         },
         {
-          "type": "range",
-          "id": "collections_per_row_int",
-          "min": 2,
-          "max": 5,
-          "step": 1,
-          "label": "Number of collections per row",
-          "default": 4
-        }
+            "type": "range",
+            "id": "products_per_row_int",
+            "min": 2,
+            "max": 5,
+            "step": 1,
+            "label": "Number of products visible at th time",
+            "default": 4
+          }
       ],
       "blocks": [
         {
