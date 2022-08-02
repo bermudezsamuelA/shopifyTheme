@@ -85,7 +85,8 @@
         "90ac01e2-4c51-42e2-b7bc-1efd1457fdae"
       ],
       "settings": {
-        "title": "Collection list",
+        "title": "all hand-crafted",
+        "subtitle": "all hand-crafted",
         "collections_per_row_int": 4
       }
     }
