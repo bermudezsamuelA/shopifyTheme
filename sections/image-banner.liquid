@@ -209,8 +209,8 @@
                 </h2>
               {%- endif -%}
             {%- when 'button' -%}
-              <div class="text-overlay__link heroButton" data-cc-animate-delay="0.3s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
-                <a class="button button--hollow" {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}>
+              <div class="text-overlay__link " data-cc-animate-delay="0.3s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
+                <a class="button button--hollow heroButton" {% if block.settings.button_link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.button_link }}"{% endif %}>
                   {{- block.settings.button_label | escape -}}
                 </a>
               </div>
