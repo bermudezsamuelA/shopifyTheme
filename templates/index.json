@@ -11,13 +11,6 @@
             "heading_h1": false
           }
         },
-        "1659378088026f543c-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>and your liųle one<\/p>",
-            "enlarge_text": false
-          }
-        },
         "1659378088026f543c-2": {
           "type": "button",
           "settings": {
@@ -28,7 +21,6 @@
       },
       "block_order": [
         "1659378088026f543c-0",
-        "1659378088026f543c-1",
         "1659378088026f543c-2"
       ],
       "settings": {
