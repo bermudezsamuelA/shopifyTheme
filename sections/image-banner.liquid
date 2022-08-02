@@ -203,11 +203,11 @@
                 {{ block.settings.text }}
               </div> -->
               {%- if block.settings.subheading_h1 -%}
-                <h1 class="text-overlay__heading {{ block.settings.sunheading_size }}" data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
+                <h1 class="text-overlay__text {{ block.settings.sunheading_size }}" data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                   {{- block.settings.text | newline_to_br -}}
                 </h1>
               {%- else -%}
-                <h2 class="text-overlay__heading {{ block.settings.sunheading_size }}" data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
+                <h2 class="text-overlay__text {{ block.settings.sunheading_size }}" data-cc-animate-delay="0.1s" data-cc-animate="cc-fade-in-up" {{ block.shopify_attributes }}>
                   {{- block.settings.text | newline_to_br -}}
                 </h2>
               {%- endif -%}
