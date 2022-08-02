@@ -52,10 +52,27 @@
     },
     "1659455821d39b3398": {
       "type": "slider-bar-products",
+      "blocks": {
+        "59d37270-98b8-48f8-b283-1700e44a6ac6": {
+          "type": "product",
+          "settings": {
+            "product": "goat-milk-soap"
+          }
+        },
+        "824e4076-c839-41d4-8f6e-e11765576ebe": {
+          "type": "product",
+          "settings": {
+            "product": "activated-charcoal-soap"
+          }
+        }
+      },
+      "block_order": [
+        "59d37270-98b8-48f8-b283-1700e44a6ac6",
+        "824e4076-c839-41d4-8f6e-e11765576ebe"
+      ],
       "settings": {
         "title": "Slidebar Products list",
-        "subtitle": "subtitle",
-        "collections_per_row_int": 4
+        "subtitle": "subtitle"
       }
     },
     "1659407512070d6907": {
