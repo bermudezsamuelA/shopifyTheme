@@ -44,7 +44,7 @@
               {%- liquid
                 assign coll_image = block.settings.product.featured_image
               -%}
-              {% render 'product-card',
+              {% render 'product-slidebar-rotate',
               product: block.settings.product,
               aspect_ratio: aspect_ratio,
               grid_show_vendor: false,
