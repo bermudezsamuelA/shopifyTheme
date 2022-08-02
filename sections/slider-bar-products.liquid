@@ -42,13 +42,13 @@
             endif
           -%}
           {%- for block in section.blocks -%}
-            {%- assign product = products[block.settings.product] -%}
-            {%- unless product == blank -%}
+            <!-- {%- assign product = products[block.settings.product] -%} -->
+            {%- unless block.settings.product == blank -%}
               {%- liquid
                 assign coll_image = product.featured_image
               -%}
               {% render 'product-card',
-              product: product,
+              product: block.settings.product,
               aspect_ratio: aspect_ratio,
               grid_show_vendor: false,
               items_per_row: section.settings.products_per_row_int,
