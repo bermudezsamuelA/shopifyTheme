@@ -18,9 +18,8 @@
             if settings.coll_card_image_ratio == 'shortest'
               assign aspect_ratio = 0
               for block in section.blocks
-                assign product = products[block.settings.product] 
-                if product != blank
-                    assign coll_image = product.featured_image
+                if block.settings.product != blank
+                    assign coll_image = block.settings.product.featured_image
                   if coll_image.aspect_ratio > aspect_ratio
                     assign aspect_ratio = coll_image.aspect_ratio
                   endif
@@ -29,9 +28,8 @@
             elsif settings.coll_card_image_ratio == 'tallest'
               assign aspect_ratio = 99
               for block in section.blocks
-                assign product = products[block.settings.product] 
-                if product != blank
-                    assign coll_image = product.featured_image
+                if block.settings.product != blank
+                    assign coll_image = block.settings.product.featured_image
                   if coll_image.aspect_ratio < aspect_ratio
                     assign aspect_ratio = coll_image.aspect_ratio
                   endif
@@ -42,10 +40,9 @@
             endif
           -%}
           {%- for block in section.blocks -%}
-            <!-- {%- assign product = products[block.settings.product] -%} -->
             {%- unless block.settings.product == blank -%}
               {%- liquid
-                assign coll_image = product.featured_image
+                assign coll_image = block.settings.product.featured_image
               -%}
               {% render 'product-card',
               product: block.settings.product,
