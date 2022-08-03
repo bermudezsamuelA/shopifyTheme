@@ -1,4 +1,4 @@
-<div class="spaced-section" data-section-type="slider-bar-products">
+<div class="spaced-section" data-section-type="slider-bar-products" id="slider-bar-products">
     <div class="container section-content">
       {%- if section.settings.title != blank -%}
         <h2 class="section-heading card-title-edted align-center" data-cc-animate>
@@ -12,64 +12,94 @@
       {%- endif -%}
       
   
-      <div class="ProductsFlex grid--row-gutters product-list">
-        {%- if section.blocks.size > 0 -%}
-          {%- liquid
-            if settings.coll_card_image_ratio == 'shortest'
-              assign aspect_ratio = 0
-              for block in section.blocks
-                if block.settings.product != blank
-                    assign coll_image = block.settings.product.featured_image
-                  if coll_image.aspect_ratio > aspect_ratio
-                    assign aspect_ratio = coll_image.aspect_ratio
-                  endif
+      <div class="ProductsFlex grid--row-gutters product-list" id="hoveredProductDisplay">
+            {%- if section.blocks.size > 0 -%}
+            {%- liquid
+                if settings.coll_card_image_ratio == 'shortest'
+                assign aspect_ratio = 0
+                for block in section.blocks
+                    if block.settings.product != blank
+                        assign coll_image = block.settings.product.featured_image
+                    if coll_image.aspect_ratio > aspect_ratio
+                        assign aspect_ratio = coll_image.aspect_ratio
+                    endif
+                    endif
+                endfor
+                elsif settings.coll_card_image_ratio == 'tallest'
+                assign aspect_ratio = 99
+                for block in section.blocks
+                    if block.settings.product != blank
+                        assign coll_image = block.settings.product.featured_image
+                    if coll_image.aspect_ratio < aspect_ratio
+                        assign aspect_ratio = coll_image.aspect_ratio
+                    endif
+                    endif
+                endfor
+                else
+                assign aspect_ratio = settings.coll_card_image_ratio
                 endif
-              endfor
-            elsif settings.coll_card_image_ratio == 'tallest'
-              assign aspect_ratio = 99
-              for block in section.blocks
-                if block.settings.product != blank
+            -%}
+            {%- for block in section.blocks -%}
+                {%- unless block.settings.product == blank -%}
+                {%- liquid
                     assign coll_image = block.settings.product.featured_image
-                  if coll_image.aspect_ratio < aspect_ratio
-                    assign aspect_ratio = coll_image.aspect_ratio
-                  endif
-                endif
-              endfor
-            else
-              assign aspect_ratio = settings.coll_card_image_ratio
-            endif
-          -%}
-          {%- for block in section.blocks -%}
-            {%- unless block.settings.product == blank -%}
-              {%- liquid
-                assign coll_image = block.settings.product.featured_image
-              -%}
-              {% render 'product-slidebar-rotate',
-              product: block.settings.product,
-              aspect_ratio: aspect_ratio,
-              grid_show_vendor: false,
-              items_per_row: section.settings.products_per_row_int,
-              animate: forloop.index
-              %}  
-            {%- else -%}
-              {% render 'onboarding-card',
+                -%}
+                {% render 'product-slidebar-rotate',
+                product: block.settings.product,
                 aspect_ratio: aspect_ratio,
+                grid_show_vendor: false,
+                items_per_row: section.settings.products_per_row_int,
+                animate: forloop.index
+                %}  
+                {%- else -%}
+                {% render 'onboarding-card',
+                    aspect_ratio: aspect_ratio,
+                    items_per_row: section.settings.products_per_row_int,
+                    is_product: true
+                %}
+                {%- endunless -%}
+            {%- endfor -%}
+            {%- else -%}
+            {%- for i in (1..section.settings.products_per_row_int) -%}
+                {% render 'onboarding-card',
                 items_per_row: section.settings.products_per_row_int,
                 is_product: true
-              %}
-            {%- endunless -%}
-          {%- endfor -%}
-        {%- else -%}
-          {%- for i in (1..section.settings.products_per_row_int) -%}
-            {% render 'onboarding-card',
-              items_per_row: section.settings.products_per_row_int,
-              is_product: true
-            %}
-          {%- endfor -%}
-        {%- endif -%}
+                %}
+            {%- endfor -%}
+            {%- endif -%}
+        <div class="arrow-container">
+            <div class="left">&lt;</div>
+            <div class="right">&gt;</div>
+        </div>
       </div>
     </div>
   </div>
+
+  <script>
+    if(document.getElementById('slider-bar-products') != null){
+        let nav = document.getElementById('hoveredProductDisplay');
+        let left = document.querySelector(".arrow-container .left");
+        let right = document.querySelector(".arrow-container .right");
+
+        let idx;
+
+        left.addEventListener("mouseenter", function(){
+        idx = setInterval(() => nav.scrollLeft -= 1, 10);
+        });
+
+        left.addEventListener("mouseleave", function(){
+        clearInterval(idx);
+        });
+
+        right.addEventListener("mouseenter", function(){
+        idx = setInterval(() => nav.scrollLeft += 1, 10);
+        });
+
+        right.addEventListener("mouseleave", function(){
+        clearInterval(idx);
+        });
+    }
+  </script>
   
   {% schema %}
     {
