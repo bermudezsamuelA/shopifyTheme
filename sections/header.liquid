@@ -76,20 +76,22 @@
 <div class="headerMenuOptions lowerHeaderHidden" id="lowerHeaderId">
   <div class="collectionsLists hiddeMenu"  id="productsHeaderSection">
     {% for collection in collections %}
+    {% if collection.title != "All Products" %}
     <div class="dropdownItem">
-        <img src="{{- collection.image | img_url: 'medium' }}" alt="" class="dropdownImg">
-        <h5 class="dropdownTitle">
-          {{- collection.title | link_to: collection.url }}
-        </h5>
-        <ul class="dropdownList">
-          {% for product in collection.products %}
-           <li class="dropdownItemList">
-            <a href="{{ product.url }}">{{ product.title }}</a>
-           </li>
-            
-          {% endfor %}
-         </ul>
-       </div>
+      <img src="{{- collection.image | img_url: 'medium' }}" alt="" class="dropdownImg">
+      <h5 class="dropdownTitle">
+        {{- collection.title | link_to: collection.url }}
+      </h5>
+      <ul class="dropdownList">
+        {% for product in collection.products %}
+         <li class="dropdownItemList">
+          <a href="{{ product.url }}">{{ product.title }}</a>
+         </li>
+          
+        {% endfor %}
+       </ul>
+     </div>
+    {% endif %}
     {% endfor %}
   </div>
   <div class="pageList hiddeMenu"  id="PagesHeaderSection">
