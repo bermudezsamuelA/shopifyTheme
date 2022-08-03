@@ -57,6 +57,7 @@
         "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
         "layout": "left",
         "heading": "We Make Our Pure Products",
+        "subheading": "just for mothers",
         "text": "<p>Feel the love with our natural products that are wholesome for youand your little one. Feel the love with our natural products that are wholesome for you and your little one.Feel the love with our natural <br\/><\/p>",
         "button_text": "Learn More",
         "button_link": "shopify:\/\/pages\/our-history",
@@ -67,6 +68,7 @@
         "color_scheme": "scheme-1",
         "color_bg": "",
         "color_heading": "",
+        "color_subheading": "",
         "color_text": ""
       }
     },
@@ -77,6 +79,7 @@
         "image": "shopify:\/\/shop_images\/PHOTO-2019-12-03-17-20-47_3.jpg",
         "layout": "right",
         "heading": "Our Ingredients Are Amazing",
+        "subheading": "naturally sourced",
         "text": "<p>Feel the love with our natural products that are wholesome for youand your little one. Feel the love with our natural products that arewholesome for you and your little one.Feel the love with our natural <br\/><\/p>",
         "button_text": "Learn More",
         "button_link": "shopify:\/\/pages\/our-ingredients",
@@ -87,6 +90,7 @@
         "color_scheme": "scheme-1",
         "color_bg": "rgba(0,0,0,0)",
         "color_heading": "",
+        "color_subheading": "#f4ab9d",
         "color_text": ""
       }
     },
