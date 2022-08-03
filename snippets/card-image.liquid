@@ -35,13 +35,13 @@
               width="388"
               height="{{ 388 | divided_by: img.aspect_ratio | round }}">
     {%- endif -%}
-    <img data-srcset="{%- if img.width < 210 %}{{ img | image_url }} {{ img.width }}w{% endif -%}
+    <!-- <img data-srcset="{%- if img.width < 210 %}{{ img | image_url }} {{ img.width }}w{% endif -%}
                       {%- if img.width >= 210 %}{{ img | image_url: width: 210 }} 210w{% endif -%}
-                      {%- if img.width >= 270 %}, {{ img | image_url: width: 100% }} 270w{% endif -%}
-                      {%- if img.width >= 380 %}, {{ img | image_url: width: 100% }} 380w{% endif -%}
-                      {%- if img.width >= 580 %}, {{ img | image_url: width: 100% }} 580w{% endif -%}
-                      {%- if img.width >= 750 %}, {{ img | image_url: width: 100% }} 750w{% endif -%}
-                      {%- if img.width >= 1160 %}, {{ img | image_url: width: 100% }} 1160w{% endif -%}"
+                      {%- if img.width >= 270 %}, {{ img | image_url: width: 270 }} 270w{% endif -%}
+                      {%- if img.width >= 380 %}, {{ img | image_url: width: 380 }} 380w{% endif -%}
+                      {%- if img.width >= 580 %}, {{ img | image_url: width: 580 }} 580w{% endif -%}
+                      {%- if img.width >= 750 %}, {{ img | image_url: width: 750 }} 750w{% endif -%}
+                      {%- if img.width >= 1160 %}, {{ img | image_url: width: 1160 }} 1160w{% endif -%}"
         data-src="{{ img | image_url: width: 580 }}"
         data-sizes="auto"
         data-aspectratio="{{ img.aspect_ratio }}"
@@ -49,7 +49,20 @@
         class="img-fit{% unless cover %} img-fit--contain{% endunless %} lazyload"
         width="{{ img.width }}"
         height="{{ img.height }}"
-        alt="{{ img.alt | escape }}">
+        alt="{{ img.alt | escape }}"> -->
+        <img 
+        data-sizes="auto"
+        data-aspectratio="{{ img.aspect_ratio }}"
+        {% if cover %}data-parent-fit="cover"{% endif %}
+        class="img-fit{% unless cover %} img-fit--contain{% endunless %} lazyload"
+        width="{{ img.width }}"
+        height="{{ img.height }}"
+        alt="{{ img.alt | escape }}"
+
+        class="cardImg"
+        src="{{ section.settings.logo  | img_url: 'medium' }}" 
+        > 
+        
   </picture>
   <noscript>
     <img src="{{ img | image_url: width: 580 }}" class="img-fit{% unless cover %} img-fit--contain{% endunless %}" width="{{ img.width }}" height="{{ img.height }}" alt="{{ img.alt | escape }}">
