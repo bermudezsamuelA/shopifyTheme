@@ -99,13 +99,6 @@
         {%- assign variant = product.variants | sort: 'price' | first -%}
         {%- render 'unit-price', variant: variant -%}
       </div>
-  
-      {%- if product.metafields.reviews.rating.value != blank and settings.enable_reviews_collection -%}
-        {% render 'rating',
-          rating_value: product.metafields.reviews.rating.value,
-          rating_count: product.metafields.reviews.rating_count
-        %}
-      {%- endif -%}
     </div>
   </div>
   
