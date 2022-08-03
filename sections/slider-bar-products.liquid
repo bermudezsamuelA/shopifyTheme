@@ -11,7 +11,11 @@
         </h4>
       {%- endif -%}
         <div class="containerListAndArrows">
-            <div class="leftarrowproducts" id="leftarrow">&lt;</div>
+            <div class="leftarrowproducts" id="leftarrow">
+             <span>
+                &lt;
+             </span>   
+            </div>
             <div class="ProductsFlex grid--row-gutters product-list" id="hoveredProductDisplay">
                     {%- if section.blocks.size > 0 -%}
                     {%- liquid
@@ -68,7 +72,11 @@
                     {%- endfor -%}
                     {%- endif -%}
             </div>
-            <div class="rightarrowproducts" id="rightarrow">&gt;</div>
+            <div class="rightarrowproducts" id="rightarrow">
+                <span>
+                    &gt;
+                </span>
+            </div>
         </div>
         
     </div>
