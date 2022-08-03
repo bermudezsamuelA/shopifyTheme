@@ -39,7 +39,7 @@
         #{{ section.id }} .section-heading { color: {{ heading_color }}; }
       {%- endif -%}
       {%- if section.settings.subheading != blank and subheading_color -%}
-      #{{ section.id }} .section-subheading { color: {{ subheading_color }}; }
+      #{{ section.id }} .subheading_img_text { color: {{ subheading_color }}; }
     {%- endif -%}
       {%- if section.settings.button_text != blank -%}
         {%- if section.settings.button_style == 'button' -%}
@@ -105,7 +105,7 @@
             </h2>
           {%- endif -%}
           {%- if section.settings.subheading != blank -%}
-          <h2 class="section-heading" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.1s">
+          <h2 class="section-heading subheading_img_text" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.1s">
             {{- section.settings.subheading | escape -}}
           </h2>
         {%- endif -%}
