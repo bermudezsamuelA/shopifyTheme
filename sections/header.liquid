@@ -155,7 +155,11 @@
       let searchBlack = document.getElementById('searchBlack');
       let cartWhite = document.getElementById('cartWhite');
       let cartBlack = document.getElementById('cartBlack');
-
+     
+      let PagesHeaderSection = document.getElementById('PagesHeaderSection');
+      if(PagesHeaderSection.classList[1] == "showMenu"){
+        pagesConsume()
+      }
       if(iconDown.classList[0] == "iconShow"){
         iconDown.classList.remove("iconShow");
         userBlack.classList.remove("iconShow");
@@ -257,6 +261,11 @@
       let searchBlack = document.getElementById('searchBlack');
       let cartWhite = document.getElementById('cartWhite');
       let cartBlack = document.getElementById('cartBlack');
+
+      let productsHeaderSection = document.getElementById('productsHeaderSection');
+      if(productsHeaderSection.classList[1] == "showMenu"){
+        productConsume()
+      }
 
       if(iconDown.classList[0] == "iconShow"){
         iconDown.classList.remove("iconShow");

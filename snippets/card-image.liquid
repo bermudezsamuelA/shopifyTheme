@@ -51,11 +51,7 @@
         height="{{ img.height }}"
         alt="{{ img.alt | escape }}"> -->
         <img 
-        data-sizes="auto"
-        data-aspectratio="{{ img.aspect_ratio }}"
-        {% if cover %}data-parent-fit="cover"{% endif %}
-        width="{{ img.width }}"
-        height="{{ img.height }}"
+
         alt="{{ img.alt | escape }}"
 
         class="cardImg"
