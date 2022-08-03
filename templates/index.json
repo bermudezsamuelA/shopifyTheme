@@ -80,7 +80,7 @@
         "text": "<p>Feel the love with our natural products that are wholesome for youand your little one. Feel the love with our natural products that arewholesome for you and your little one.Feel the love with our natural <br\/><\/p>",
         "button_text": "Learn More",
         "button_link": "shopify:\/\/pages\/our-ingredients",
-        "button_style": "feature-link",
+        "button_style": "button button--alt",
         "text_alignment": "left",
         "text_center_mobile": false,
         "bg_style": "content",
