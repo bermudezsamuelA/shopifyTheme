@@ -67,9 +67,9 @@
         "bg_style": "content",
         "color_scheme": "scheme-1",
         "color_bg": "",
-        "color_heading": "",
-        "color_subheading": "",
-        "color_text": ""
+        "color_heading": "rgba(0,0,0,0)",
+        "color_subheading": "#f4ab9d",
+        "color_text": "rgba(0,0,0,0)"
       }
     },
     "1659553101f5d82a65": {
