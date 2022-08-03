@@ -114,7 +114,10 @@
       ],
       "settings": {
         "title": "Slidebar Products list",
-        "subtitle": "subtitle"
+        "subtitle": "subtitle",
+        "products_per_row_int": 4,
+        "icon_left": "shopify:\/\/shop_images\/baseline_chevron_left_black_24dp_0296d78a-44e5-486a-a276-644cc12de0c5.png",
+        "icon_right": "shopify:\/\/shop_images\/baseline_chevron_right_black_24dp.png"
       }
     },
     "1659407512070d6907": {
