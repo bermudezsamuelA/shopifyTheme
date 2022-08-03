@@ -33,7 +33,7 @@
     endif
   -%}
   
-  <div class="card{% if settings.product_hover_image and product.media.size > 1 %} card--with-hover{% endif %} column {{ col_class }}{% unless product.available %} sold-out{% endunless %}{% if on_sale %} on-sale{% endif %}"{% if animate %} data-cc-animate="cc-fade-in-up" data-cc-animate-delay="{{ animate | times: 0.15 }}s"{% endif %}>
+  <div class="card cardSlidebar {% if settings.product_hover_image and product.media.size > 1 %} card--with-hover{% endif %} column {{ col_class }}{% unless product.available %} sold-out{% endunless %}{% if on_sale %} on-sale{% endif %}"{% if animate %} data-cc-animate="cc-fade-in-up" data-cc-animate-delay="{{ animate | times: 0.15 }}s"{% endif %}>
     <div class="card__image">
       {%- if product.featured_media -%}
         {% render 'card-image',
