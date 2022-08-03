@@ -50,6 +50,46 @@
         "text_below_mobile": false
       }
     },
+    "16595530831eb59a1e": {
+      "type": "image-with-text",
+      "settings": {
+        "skip_container": false,
+        "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
+        "layout": "left",
+        "heading": "Image with text",
+        "text": "<p>Pair text with an image to give focus to a selected product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
+        "button_text": "Shop",
+        "button_link": "",
+        "button_style": "feature-link",
+        "text_alignment": "left",
+        "text_center_mobile": false,
+        "bg_style": "content",
+        "color_scheme": "scheme-1",
+        "color_bg": "",
+        "color_heading": "",
+        "color_text": ""
+      }
+    },
+    "1659553101f5d82a65": {
+      "type": "image-with-text",
+      "settings": {
+        "skip_container": false,
+        "image": "shopify:\/\/shop_images\/PHOTO-2019-12-03-17-20-47_3.jpg",
+        "layout": "right",
+        "heading": "Image with text",
+        "text": "<p>Pair text with an image to give focus to a selected product, collection or blog post. Add details on availability, style or even provide a review.<\/p>",
+        "button_text": "Shop",
+        "button_link": "",
+        "button_style": "feature-link",
+        "text_alignment": "left",
+        "text_center_mobile": false,
+        "bg_style": "content",
+        "color_scheme": "scheme-1",
+        "color_bg": "",
+        "color_heading": "",
+        "color_text": ""
+      }
+    },
     "1659455821d39b3398": {
       "type": "slider-bar-products",
       "blocks": {
@@ -163,6 +203,8 @@
   },
   "order": [
     "16593780883f1c1917",
+    "16595530831eb59a1e",
+    "1659553101f5d82a65",
     "1659455821d39b3398",
     "1659407512070d6907"
   ]
