@@ -24,6 +24,9 @@
       unless section.settings.color_heading == blank or section.settings.color_heading contains ',0'
         assign heading_color = section.settings.color_heading
       endunless
+      unless section.settings.color_subheading == blank or section.settings.color_subheading contains ',0'
+        assign subheading_color = section.settings.color_subheading
+      endunless
       if section.settings.color_text == blank or section.settings.color_text contains ',0'
         assign text_color = settings.col_text
       else
@@ -35,6 +38,9 @@
       {%- if section.settings.heading != blank and heading_color -%}
         #{{ section.id }} .section-heading { color: {{ heading_color }}; }
       {%- endif -%}
+      {%- if section.settings.subheading != blank and subheading_color -%}
+      #{{ section.id }} .section-subheading { color: {{ subheading_color }}; }
+    {%- endif -%}
       {%- if section.settings.button_text != blank -%}
         {%- if section.settings.button_style == 'button' -%}
           #{{ section.id }} .button { border-color: {{ text_color }}; background: {{ text_color }}; color: {{ bg_color }}; }
@@ -98,6 +104,11 @@
               {{- section.settings.heading | escape -}}
             </h2>
           {%- endif -%}
+          {%- if section.settings.subheading != blank -%}
+          <h2 class="section-heading" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.1s">
+            {{- section.settings.subheading | escape -}}
+          </h2>
+        {%- endif -%}
           {%- if section.settings.text != blank -%}
             <div class="rte" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.2s">
               {{ section.settings.text }}
@@ -158,6 +169,12 @@
         "id": "heading",
         "label": "Heading",
         "default": "Image with text"
+      },
+      {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "subtitle"
       },
       {
         "type": "richtext",
@@ -275,6 +292,11 @@
         "type": "color",
         "id": "color_heading",
         "label": "Custom heading color"
+      },
+      {
+        "type": "color",
+        "id": "color_subheading",
+        "label": "Custom subheading color"
       },
       {
         "type": "color",
