@@ -12,9 +12,7 @@
       {%- endif -%}
         <div class="containerListAndArrows">
             <div class="leftarrowproducts" id="leftarrow">
-             <span>
-                &lt;
-             </span>   
+                <img src="{{ section.settings.icon_left | img_url: 'small'}}">
             </div>
             <div class="ProductsFlex grid--row-gutters product-list" id="hoveredProductDisplay">
                     {%- if section.blocks.size > 0 -%}
@@ -73,9 +71,7 @@
                     {%- endif -%}
             </div>
             <div class="rightarrowproducts" id="rightarrow">
-                <span>
-                    &gt;
-                </span>
+              <img src="{{ section.settings.icon_right | img_url: 'small'}}">
             </div>
         </div>
         
@@ -133,6 +129,16 @@
             "step": 1,
             "label": "Number of products visible at th time",
             "default": 4
+        },
+        {
+            "type": "image_picker",
+            "id": "icon_left",
+            "label": "left icon"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon_right",
+            "label": "right icon"
           }
       ],
       "blocks": [
