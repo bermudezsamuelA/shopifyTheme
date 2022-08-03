@@ -52,10 +52,16 @@
         alt="{{ img.alt | escape }}"> -->
         <img 
 
+        data-sizes="auto"
+        data-aspectratio="{{ img.aspect_ratio }}"
+        {% if cover %}data-parent-fit="cover"{% endif %}
+        class="img-fit{% unless cover %} img-fit--contain{% endunless %} lazyload"
+        width="{{ img.width }}"
+        height="{{ img.height }}"
         alt="{{ img.alt | escape }}"
-
         class="cardImg"
-        src="{{ img  | img_url: 'medium' }}" 
+        src="{{ img  | img_url: 'master' }}" 
+        width="{{ section.settings.logo_width }}"
         > 
         
   </picture>
