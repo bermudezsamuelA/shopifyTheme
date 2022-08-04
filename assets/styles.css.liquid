@@ -680,12 +680,12 @@ main {
   color: {{ col_scheme_1_text }};
 }
 .color-scheme-1 .button.button--alt {
-  border-color: {{ col_scheme_1_text }};
+  border-color: #F4AB9D;
   background: none;
   color: inherit;
 }
 .color-scheme-1 .button.button--alt:hover {
-  background: {{ col_scheme_1_text }};
+  background: #F4AB9D;
   color: {{ col_scheme_1_bg }};
 }
 
@@ -1593,7 +1593,12 @@ button,
 }
 
 .button {
-  display: inline-block;
+  place-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  height: 80%;
   min-height: 40px;
   padding: 12px 24px;
   transition: 0.2s ease;
@@ -6945,6 +6950,7 @@ body:not(.header-overlapping) .active-banner .banner--bg-color::before {
 .media-with-text {
   display: flex;
   flex-direction: column;
+  background-color: transparent;
 }
 
 .media-with-text .rte,
@@ -6998,6 +7004,7 @@ body:not(.header-overlapping) .active-banner .banner--bg-color::before {
 
 .media-with-text__link {
   margin-top: 30px;
+  display: grid;
 }
 
 .media-with-text .errors {
