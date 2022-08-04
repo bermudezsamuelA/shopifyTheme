@@ -71,7 +71,7 @@
           {{ section.settings.heading | escape }}
         </h2>
       {%- endif -%}
-      <div class="grid grid--row-gutters">
+      <div class="grid grid--row-gutters container-logo-list">
         {%- for block in section.blocks -%}
           <div class="column {{ col_class }}" data-cc-animate data-cc-animate-delay="{{ forloop.index | times: 0.1 }}s" {{ block.shopify_attributes }}>
             {%- if block.settings.url != blank -%}
@@ -87,12 +87,13 @@
                                   {%- if img.width >= 400 %}, {{ img | image_url: width: 400 }} 400w{% endif -%}"
                       data-src="{{ img | image_url: width: 200 }}"
                       data-sizes="auto"
+                      class="logo-list-img"
                       class="lazyload"
                       width="{{ img.width }}"
                       height="{{ img.height }}"
                       alt="{{ img.alt | escape }}">
                 <noscript>
-                  <img src="{{ img | image_url: width: 200 }}" width="{{ img.width }}" height="{{ img.height }}" alt="{{ img.alt | escape }}">
+                  <img src="{{ img | image_url: width: 200 }}" class="logo-list-img" width="{{ img.width }}" height="{{ img.height }}" alt="{{ img.alt | escape }}">
                 </noscript>
               {%- else -%}
                 {%- case block.settings.icon -%}
@@ -140,7 +141,7 @@
               {%- endif -%}
             </div>
             {%- if block.settings.title != blank -%}
-              <div class="logo-list__caption{% if section.settings.enlarge_text %} large-text{% endif %}">
+              <div class="logo-list__caption logo-list-title {% if section.settings.enlarge_text %} large-text{% endif %}">
                 {{ block.settings.title }}
               </div>
             {%- endif -%}
