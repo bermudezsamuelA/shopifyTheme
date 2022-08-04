@@ -60,19 +60,6 @@
       {%- endif -%}
   
       {%- comment -%} Label {%- endcomment -%}
-      {%- if product.available == false and settings.label_soldout_show -%}
-        <span class="prod-label sold-out {{ settings.product_label_position }}">{{ 'products.labels.sold_out' | t }}</span>
-      {%- elsif product.compare_at_price_max > product.price and settings.label_sale_show -%}
-        <span class="prod-label sale {{ settings.product_label_position }}">{{ 'products.labels.sale' | t }}</span>
-      {%- elsif settings.label_remain_show and product.variants.size == 1 and inv_mngmt_size > 0 and product.variants.first.inventory_quantity > 0 and product.variants.first.inventory_quantity <= limit_as_int -%}
-        <span class="prod-label inventory {{ settings.product_label_position }}">{{ 'products.labels.only_x_left' | t: quantity: product.variants.first.inventory_quantity }}</span>
-      {%- else -%}
-        {%- for tag in product.tags -%}
-          {%- if tag contains 'meta-label-' -%}
-            <span class="prod-label general {{ settings.product_label_position }}">{{ tag | remove: 'meta-label-' }}</span>
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
     </div>
     <div class="card__content">
       {%- if grid_show_vendor -%}
