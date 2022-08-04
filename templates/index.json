@@ -50,50 +50,6 @@
         "text_below_mobile": false
       }
     },
-    "16595530831eb59a1e": {
-      "type": "image-with-text",
-      "settings": {
-        "skip_container": false,
-        "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
-        "layout": "left",
-        "heading": "We Make Our Pure Products",
-        "subheading": "just for mothers",
-        "text": "<p>Feel the love with our natural products that are wholesome for youand your little one. Feel the love with our natural products that are wholesome for you and your little one.Feel the love with our natural <br\/><\/p>",
-        "button_text": "Learn More",
-        "button_link": "shopify:\/\/pages\/our-history",
-        "button_style": "button button--alt",
-        "text_alignment": "center",
-        "text_center_mobile": true,
-        "bg_style": "content",
-        "color_scheme": "scheme-1",
-        "color_bg": "",
-        "color_heading": "rgba(0,0,0,0)",
-        "color_subheading": "#f4ab9d",
-        "color_text": "rgba(0,0,0,0)"
-      }
-    },
-    "1659553101f5d82a65": {
-      "type": "image-with-text",
-      "settings": {
-        "skip_container": false,
-        "image": "shopify:\/\/shop_images\/PHOTO-2019-12-03-17-20-47_3.jpg",
-        "layout": "right",
-        "heading": "Our Ingredients Are Amazing",
-        "subheading": "naturally sourced",
-        "text": "<p>Feel the love with our natural products that are wholesome for youand your little one. Feel the love with our natural products that arewholesome for you and your little one.Feel the love with our natural <br\/><\/p>",
-        "button_text": "Learn More",
-        "button_link": "shopify:\/\/pages\/our-ingredients",
-        "button_style": "button button--alt",
-        "text_alignment": "center",
-        "text_center_mobile": true,
-        "bg_style": "content",
-        "color_scheme": "scheme-1",
-        "color_bg": "rgba(0,0,0,0)",
-        "color_heading": "",
-        "color_subheading": "#f4ab9d",
-        "color_text": ""
-      }
-    },
     "1659455821d39b3398": {
       "type": "slider-bar-products",
       "blocks": {
@@ -164,6 +120,50 @@
         "icon_right": "shopify:\/\/shop_images\/baseline_chevron_right_black_24dp.png"
       }
     },
+    "16595530831eb59a1e": {
+      "type": "image-with-text",
+      "settings": {
+        "skip_container": false,
+        "image": "shopify:\/\/shop_images\/woman-holding-baby-while-sitting-on-fur-bean-bag-698878.jpg",
+        "layout": "left",
+        "heading": "We Make Our Pure Products",
+        "subheading": "just for mothers",
+        "text": "<p>Feel the love with our natural products that are wholesome for youand your little one. Feel the love with our natural products that are wholesome for you and your little one.Feel the love with our natural <br\/><\/p>",
+        "button_text": "Learn More",
+        "button_link": "shopify:\/\/pages\/our-history",
+        "button_style": "button button--alt",
+        "text_alignment": "center",
+        "text_center_mobile": true,
+        "bg_style": "content",
+        "color_scheme": "scheme-1",
+        "color_bg": "",
+        "color_heading": "rgba(0,0,0,0)",
+        "color_subheading": "#f4ab9d",
+        "color_text": "rgba(0,0,0,0)"
+      }
+    },
+    "1659553101f5d82a65": {
+      "type": "image-with-text",
+      "settings": {
+        "skip_container": false,
+        "image": "shopify:\/\/shop_images\/PHOTO-2019-12-03-17-20-47_3.jpg",
+        "layout": "right",
+        "heading": "Our Ingredients Are Amazing",
+        "subheading": "naturally sourced",
+        "text": "<p>Feel the love with our natural products that are wholesome for youand your little one. Feel the love with our natural products that arewholesome for you and your little one.Feel the love with our natural <br\/><\/p>",
+        "button_text": "Learn More",
+        "button_link": "shopify:\/\/pages\/our-ingredients",
+        "button_style": "button button--alt",
+        "text_alignment": "center",
+        "text_center_mobile": true,
+        "bg_style": "content",
+        "color_scheme": "scheme-1",
+        "color_bg": "rgba(0,0,0,0)",
+        "color_heading": "",
+        "color_subheading": "#f4ab9d",
+        "color_text": ""
+      }
+    },
     "1659407512070d6907": {
       "type": "collection-list",
       "blocks": {
@@ -207,9 +207,9 @@
   },
   "order": [
     "16593780883f1c1917",
+    "1659455821d39b3398",
     "16595530831eb59a1e",
     "1659553101f5d82a65",
-    "1659455821d39b3398",
     "1659407512070d6907"
   ]
 }
