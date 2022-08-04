@@ -203,6 +203,59 @@
         "subtitle": "all hand-crafted",
         "collections_per_row_int": 4
       }
+    },
+    "1659620077d5bf579c": {
+      "type": "logo-list",
+      "blocks": {
+        "1659620077c6addb19-0": {
+          "type": "logo",
+          "settings": {
+            "title": "flecha",
+            "icon": "svg-package",
+            "image": "shopify:\/\/shop_images\/baseline_chevron_right_black_24dp.png",
+            "url": ""
+          }
+        },
+        "376f273b-5bce-4a50-8a42-f56696bc8e66": {
+          "type": "logo",
+          "settings": {
+            "title": "Logo \/ feature",
+            "icon": "svg-package",
+            "url": ""
+          }
+        },
+        "887d4a28-4f0e-41dd-b65e-71f6c69f36e9": {
+          "type": "logo",
+          "settings": {
+            "title": "Logo \/ feature",
+            "icon": "svg-package",
+            "url": ""
+          }
+        },
+        "aa25bc2e-c451-44e1-b798-c85612734cd8": {
+          "type": "logo",
+          "settings": {
+            "title": "Logo \/ feature",
+            "icon": "svg-package",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "1659620077c6addb19-0",
+        "376f273b-5bce-4a50-8a42-f56696bc8e66",
+        "887d4a28-4f0e-41dd-b65e-71f6c69f36e9",
+        "aa25bc2e-c451-44e1-b798-c85612734cd8"
+      ],
+      "settings": {
+        "heading": "",
+        "icon_size": 50,
+        "enlarge_text": false,
+        "color_scheme": "scheme-1",
+        "color_bg": "",
+        "color_heading": "",
+        "color_text": ""
+      }
     }
   },
   "order": [
@@ -210,6 +263,7 @@
     "1659455821d39b3398",
     "16595530831eb59a1e",
     "1659553101f5d82a65",
-    "1659407512070d6907"
+    "1659407512070d6907",
+    "1659620077d5bf579c"
   ]
 }
