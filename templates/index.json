@@ -212,7 +212,7 @@
           "settings": {
             "title": "flecha",
             "icon": "svg-package",
-            "image": "shopify:\/\/shop_images\/baseline_chevron_right_black_24dp.png",
+            "image": "shopify:\/\/shop_images\/streamlinehq-plant-nursing-pot-spout-ecology-nature-48_1.png",
             "url": ""
           }
         },
@@ -220,7 +220,8 @@
           "type": "logo",
           "settings": {
             "title": "Logo \/ feature",
-            "icon": "svg-package",
+            "icon": "svg-thumbs-up",
+            "image": "shopify:\/\/shop_images\/streamlinehq-baby-kids-trolley-family-kids-48_1.png",
             "url": ""
           }
         },
@@ -229,6 +230,7 @@
           "settings": {
             "title": "Logo \/ feature",
             "icon": "svg-package",
+            "image": "shopify:\/\/shop_images\/streamlinehq-water-protection-care-handle-ecology-nature-48.png",
             "url": ""
           }
         },
@@ -237,6 +239,7 @@
           "settings": {
             "title": "Logo \/ feature",
             "icon": "svg-package",
+            "image": "shopify:\/\/shop_images\/streamlinehq-bodycare-spa-lotus-health-beauty-48_1.png",
             "url": ""
           }
         }
