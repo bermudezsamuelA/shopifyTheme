@@ -164,46 +164,6 @@
         "color_text": ""
       }
     },
-    "1659407512070d6907": {
-      "type": "collection-list",
-      "blocks": {
-        "f8efb0d2-0df3-4eea-8ee7-7a6ea87db41d": {
-          "type": "collection",
-          "settings": {
-            "collection": "natural-soaps"
-          }
-        },
-        "1a5a2fd3-611a-49d0-973d-2c649b9c0367": {
-          "type": "collection",
-          "settings": {
-            "collection": "natural-creams"
-          }
-        },
-        "49d6bfa1-d01b-4110-af32-5f5c33ad1a5e": {
-          "type": "collection",
-          "settings": {
-            "collection": "natural-teas"
-          }
-        },
-        "90ac01e2-4c51-42e2-b7bc-1efd1457fdae": {
-          "type": "collection",
-          "settings": {
-            "collection": "all-products"
-          }
-        }
-      },
-      "block_order": [
-        "f8efb0d2-0df3-4eea-8ee7-7a6ea87db41d",
-        "1a5a2fd3-611a-49d0-973d-2c649b9c0367",
-        "49d6bfa1-d01b-4110-af32-5f5c33ad1a5e",
-        "90ac01e2-4c51-42e2-b7bc-1efd1457fdae"
-      ],
-      "settings": {
-        "title": "Products by Category",
-        "subtitle": "all hand-crafted",
-        "collections_per_row_int": 4
-      }
-    },
     "1659620077d5bf579c": {
       "type": "logo-list",
       "blocks": {
@@ -280,6 +240,46 @@
         "color_text": ""
       }
     },
+    "1659407512070d6907": {
+      "type": "collection-list",
+      "blocks": {
+        "f8efb0d2-0df3-4eea-8ee7-7a6ea87db41d": {
+          "type": "collection",
+          "settings": {
+            "collection": "natural-soaps"
+          }
+        },
+        "1a5a2fd3-611a-49d0-973d-2c649b9c0367": {
+          "type": "collection",
+          "settings": {
+            "collection": "natural-creams"
+          }
+        },
+        "49d6bfa1-d01b-4110-af32-5f5c33ad1a5e": {
+          "type": "collection",
+          "settings": {
+            "collection": "natural-teas"
+          }
+        },
+        "90ac01e2-4c51-42e2-b7bc-1efd1457fdae": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products"
+          }
+        }
+      },
+      "block_order": [
+        "f8efb0d2-0df3-4eea-8ee7-7a6ea87db41d",
+        "1a5a2fd3-611a-49d0-973d-2c649b9c0367",
+        "49d6bfa1-d01b-4110-af32-5f5c33ad1a5e",
+        "90ac01e2-4c51-42e2-b7bc-1efd1457fdae"
+      ],
+      "settings": {
+        "title": "Products by Category",
+        "subtitle": "all hand-crafted",
+        "collections_per_row_int": 4
+      }
+    },
     "1659671967786c1f64": {
       "type": "newsletter",
       "settings": {
@@ -297,8 +297,8 @@
     "1659455821d39b3398",
     "16595530831eb59a1e",
     "1659553101f5d82a65",
-    "1659407512070d6907",
     "1659620077d5bf579c",
+    "1659407512070d6907",
     "1659671967786c1f64"
   ]
 }
