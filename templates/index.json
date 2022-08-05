@@ -279,6 +279,17 @@
         "color_heading": "",
         "color_text": ""
       }
+    },
+    "1659671967786c1f64": {
+      "type": "newsletter",
+      "settings": {
+        "heading": "Subscribe to our newsletter",
+        "subheading": "living the natural lifestyle",
+        "color_scheme": "scheme-1",
+        "color_bg": "",
+        "color_heading": "",
+        "color_text": ""
+      }
     }
   },
   "order": [
@@ -287,6 +298,7 @@
     "16595530831eb59a1e",
     "1659553101f5d82a65",
     "1659407512070d6907",
-    "1659620077d5bf579c"
+    "1659620077d5bf579c",
+    "1659671967786c1f64"
   ]
 }
