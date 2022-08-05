@@ -61,10 +61,10 @@
       {% form 'customer', id: form_id %}
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
         {%- if section.settings.heading != blank -%}
-          <h2 class="section-heading h3">{{ section.settings.heading }}</h2>
+          <h2 class="section-heading h2">{{ section.settings.heading }}</h2>
         {%- endif -%}
         {%- if section.settings.subheading != blank -%}
-          <h2 class="section-subheading h3">{{ section.settings.subheading }}</h2>
+          <h1 class="section-subheading h1">{{ section.settings.subheading }}</h1>
         {%- endif -%}
         <div class="input-with-button">
           <div class="input-with-button__input-wrapper wrapperNewsletter">
