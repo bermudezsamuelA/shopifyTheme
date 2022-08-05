@@ -75,11 +75,6 @@
           <button class="input-with-button__button button" type="submit">{{ 'layout.signup.button' | t }}</button>
         </div>
 
-        {%- if section.settings.text != blank -%}
-          <div class="rte reading-width">
-            {{ section.settings.text }}
-          </div>
-        {%- endif -%}
       {% endform %}
     </div>
   </div>
@@ -97,10 +92,10 @@
         "default": "Subscribe to our newsletter"
       },
       {
-        "type": "richtext",
-        "id": "text",
-        "label": "Text",
-        "default": "<p>A short sentence describing what someone will receive by subscribing<\/p>"
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "living the natural lifestyle"
       },
       {
         "type": "header",
