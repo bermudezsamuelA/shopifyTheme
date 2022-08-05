@@ -16,7 +16,9 @@
       unless section.settings.color_heading == blank or section.settings.color_heading contains ',0'
         assign heading_color = section.settings.color_heading
       endunless
-
+      unless section.settings.color_subheading == blank or section.settings.color_subheading contains ',0'
+        assign subheading_color = section.settings.color_subheading
+      endunless
       if section.settings.color_text == blank or section.settings.color_text contains ',0'
         assign text_color = false
       else
@@ -41,6 +43,9 @@
         #{{ section.id }} .section-heading { color: {{ heading_color }}; }
       {%- endif -%}
     {%- endif -%}
+    {%- if subheading_color and section.settings.subheading != blank and section.settings.color_scheme == 'custom' -%}
+      #{{ section.id }} .section-subheading { color: {{ subheading_color }}; }
+    {%- endif -%} 
     {%- if text_color -%}
       #{{ section.id }} .input { border-color: {{ text_color | color_mix: bg_color, 40 }}; color: {{ text_color }}; }
       #{{ section.id }} .input:focus { border-color: {{ text_color }}; }
@@ -57,6 +62,9 @@
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
         {%- if section.settings.heading != blank -%}
           <h2 class="section-heading h3">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <h2 class="section-subheading h3">{{ section.settings.subheading }}</h2>
         {%- endif -%}
         <div class="input-with-button">
           <div class="input-with-button__input-wrapper wrapperNewsletter">
@@ -131,6 +139,11 @@
         "type": "color",
         "id": "color_heading",
         "label": "Custom heading color"
+      },
+      {
+        "type": "color",
+        "id": "color_subheading",
+        "label": "Custom subheading color"
       },
       {
         "type": "color",
