@@ -55,9 +55,6 @@
       {%- assign form_id = section.id | prepend: 'signup-form-' -%}
       {% form 'customer', id: form_id %}
         <input type="hidden" name="contact[tags]" value="prospect,newsletter">
-        <div class="signup-icon">
-          {% render 'svg-email' %}
-        </div>
         {%- if section.settings.heading != blank -%}
           <h2 class="section-heading h3">{{ section.settings.heading }}</h2>
         {%- endif -%}
