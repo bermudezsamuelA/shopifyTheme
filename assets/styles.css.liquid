@@ -217,6 +217,12 @@ File structure:
 {{ nav_font | font_face: font_display: 'fallback' }}
 {%- assign logo_font = settings.type_logo_font -%}
 {{ logo_font | font_face: font_display: 'fallback' }}
+
+@font-face {
+  font-family: "clicker";
+  src: url({{ "ClickerScript-Regular.ttf" | asset_url }}) format("TrueType");
+}
+
 #cboxOverlay,
 #cboxWrapper,
 #colorbox {
