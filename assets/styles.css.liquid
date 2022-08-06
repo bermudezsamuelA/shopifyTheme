@@ -219,10 +219,15 @@ File structure:
 {{ logo_font | font_face: font_display: 'fallback' }}
 
 @font-face {
-  font-family: "clicker";
+  font-family: "clicker script";
   src: url({{ "ClickerScript-Regular.ttf" | asset_url }}) format("TrueType");
 }
-
+*{
+  font-family: 'Playfair Display';
+}
+a{  
+  font-family: Montserrat;
+}
 #cboxOverlay,
 #cboxWrapper,
 #colorbox {
@@ -7861,5 +7866,6 @@ font-size: 1rem;
   width: 30% !important;
 }
 .section-subheading{
-  color: #F4AB9D !important  ;
+  color: #F4AB9D !important;
+  font-family: "clicker script";
 }
