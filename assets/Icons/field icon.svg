@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="56.667" viewBox="0 0 68 56.667">
+  <g id="field_icon" data-name="field icon" transform="translate(-384 -1347)">
+    <rect id="Rectangle_92" data-name="Rectangle 92" width="6" height="6" transform="translate(415 1347)" fill="#3e7879"/>
+    <rect id="Rectangle_93" data-name="Rectangle 93" width="5.666" height="5.666" transform="translate(426.013 1354.814) rotate(-45)" fill="#3e7879"/>
+    <rect id="Rectangle_94" data-name="Rectangle 94" width="6" height="6" transform="translate(432 1364)" fill="#3e7879"/>
+    <rect id="Rectangle_95" data-name="Rectangle 95" width="5.666" height="5.666" transform="translate(401.974 1354.814) rotate(-45)" fill="#3e7879"/>
+    <rect id="Rectangle_96" data-name="Rectangle 96" width="6" height="6" transform="translate(398 1364)" fill="#3e7879"/>
+    <path id="Path_66" data-name="Path 66" d="M451.7,1381.234l-11.333-22.667a2.836,2.836,0,0,0-2.536-1.567H398.167a2.829,2.829,0,0,0-2.533,1.567L384.3,1381.234a2.829,2.829,0,0,0,2.533,4.1h62.334a2.832,2.832,0,0,0,2.536-4.1Zm-30.869-18.567h3.7l6.375,17H420.833Zm-5.667,17H405.091l6.375-17h3.7Zm-15.249-17h5.494l-6.375,17h-7.619Zm37.049,17-6.375-17h5.491l8.5,17Z" transform="translate(0 18.334)" fill="#3e7879"/>
+    <path id="Path_67" data-name="Path 67" d="M392.683,1365.113a2.833,2.833,0,0,0,2.672,1.887h15.958a2.833,2.833,0,0,0,2.672-1.887,11.118,11.118,0,0,0,.683-3.78,11.333,11.333,0,1,0-22.667,0A11.186,11.186,0,0,0,392.683,1365.113Zm10.651-9.446a5.672,5.672,0,0,1,5.667,5.667H397.667A5.672,5.672,0,0,1,403.333,1355.667Z" transform="translate(14.667 5.5)" fill="#3e7879"/>
+  </g>
+</svg>
