@@ -2,12 +2,14 @@
   <!-- MENU SUPERIOR -->
   <div class="HeaderSection" id="UpperHeaderId">
     <div class="iconHeaderContainer">
-      <img 
+      <!-- <img 
       class="iconHeader"
       src="{{ section.settings.logo  | img_url: 'medium' }}" 
       alt="{{ section.settings.logo.alt }}"
       width="{{ section.settings.logo_width }}"
-      >
+      > -->
+      {% include 'my-theme-icons' with 'principal' %}
+
     </div>
     <div class="blocksContent">
       {% for block in section.blocks %}
