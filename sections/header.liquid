@@ -8,7 +8,7 @@
       alt="{{ section.settings.logo.alt }}"
       width="{{ section.settings.logo_width }}"
       > -->
-      <div class="iconShow" id="iconPrincipalWhite" >
+      <div class="showMenu" id="iconPrincipalWhite" >
           {% include 'my-theme-icons' with 'principal' %}
       </div>
       <div class="iconHidden"  id="iconPrincipalBlack"  >
@@ -206,8 +206,8 @@
         productsHeaderSection.classList.add("hiddeMenu")
 
         iconPrincipalWhite.classList.remove("iconHidden")
-        iconPrincipalWhite.classList.add("iconShow")
-        iconPrincipalBlack.classList.remove("iconShow")
+        iconPrincipalWhite.classList.add("showMenu")
+        iconPrincipalBlack.classList.remove("showMenu")
         iconPrincipalBlack.classList.add("iconHidden")
         }
         else{
@@ -253,10 +253,10 @@
           productsHeaderSection.classList.remove("hiddeMenu")
           productsHeaderSection.classList.add("showMenu")
 
-          iconPrincipalWhite.classList.remove("iconShow")
+          iconPrincipalWhite.classList.remove("showMenu")
           iconPrincipalWhite.classList.add("iconHidden")
           iconPrincipalBlack.classList.remove("iconHidden")
-          iconPrincipalBlack.classList.add("iconShow")
+          iconPrincipalBlack.classList.add("showMenu")
         }
     }
 
@@ -325,8 +325,8 @@
         PagesHeaderSection.classList.add("hiddeMenu")
 
         iconPrincipalWhite.classList.remove("iconHidden")
-        iconPrincipalWhite.classList.add("iconShow")
-        iconPrincipalBlack.classList.remove("iconShow")
+        iconPrincipalWhite.classList.add("showMenu")
+        iconPrincipalBlack.classList.remove("showMenu")
         iconPrincipalBlack.classList.add("iconHidden")
 
         }
@@ -373,10 +373,10 @@
           PagesHeaderSection.classList.add("showMenu")
 
           
-          iconPrincipalWhite.classList.remove("iconShow")
+          iconPrincipalWhite.classList.remove("showMenu")
           iconPrincipalWhite.classList.add("iconHidden")
           iconPrincipalBlack.classList.remove("iconHidden")
-          iconPrincipalBlack.classList.add("iconShow")
+          iconPrincipalBlack.classList.add("showMenu")
           }
     }
   }
