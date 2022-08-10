@@ -8,8 +8,11 @@
       alt="{{ section.settings.logo.alt }}"
       width="{{ section.settings.logo_width }}"
       > -->
-      <div class="iconHeader" >
-        {% include 'my-theme-icons' with 'principal' %}
+      <div class="iconHeader iconShow" id="iconPrincipalWhite" >
+          {% include 'my-theme-icons' with 'principal' %}
+      </div>
+      <div class="iconHeader iconHidden"  id="iconPrincipalBlack"  >
+          {% include 'my-theme-icons' with 'principalBlack' %}
       </div>
 
     </div>
@@ -159,7 +162,8 @@
       let searchBlack = document.getElementById('searchBlack');
       let cartWhite = document.getElementById('cartWhite');
       let cartBlack = document.getElementById('cartBlack');
-     
+      let iconPrincipalWhite = document.getElementById('iconPrincipalWhite');
+      let iconPrincipalBlack = document.getElementById('iconPrincipalBlack');
       let PagesHeaderSection = document.getElementById('PagesHeaderSection');
       if(PagesHeaderSection.classList[1] == "showMenu"){
         pagesConsume()
@@ -201,6 +205,10 @@
         productsHeaderSection.classList.remove("showMenu")
         productsHeaderSection.classList.add("hiddeMenu")
 
+        iconPrincipalWhite.classList.remove("iconHidden")
+        iconPrincipalWhite.classList.add("iconShow")
+        iconPrincipalBlack.classList.remove("iconShow")
+        iconPrincipalBlack.classList.add("iconHidden")
         }
         else{
 
@@ -244,6 +252,11 @@
 
           productsHeaderSection.classList.remove("hiddeMenu")
           productsHeaderSection.classList.add("showMenu")
+
+          iconPrincipalWhite.classList.remove("iconShow")
+          iconPrincipalWhite.classList.add("iconHidden")
+          iconPrincipalBlack.classList.remove("iconHidden")
+          iconPrincipalBlack.classList.add("iconShow")
         }
     }
 
@@ -265,6 +278,9 @@
       let searchBlack = document.getElementById('searchBlack');
       let cartWhite = document.getElementById('cartWhite');
       let cartBlack = document.getElementById('cartBlack');
+
+      let iconPrincipalWhite = document.getElementById('iconPrincipalWhite');
+      let iconPrincipalBlack = document.getElementById('iconPrincipalBlack');
 
       let productsHeaderSection = document.getElementById('productsHeaderSection');
       if(productsHeaderSection.classList[1] == "showMenu"){
@@ -307,6 +323,11 @@
 
         PagesHeaderSection.classList.remove("showMenu")
         PagesHeaderSection.classList.add("hiddeMenu")
+        
+        iconPrincipalWhite.classList.remove("iconHidden")
+        iconPrincipalWhite.classList.add("iconShow")
+        iconPrincipalBlack.classList.remove("iconShow")
+        iconPrincipalBlack.classList.add("iconHidden")
 
         }
         else{
@@ -350,6 +371,12 @@
 
           PagesHeaderSection.classList.remove("hiddeMenu")
           PagesHeaderSection.classList.add("showMenu")
+
+          
+          iconPrincipalWhite.classList.remove("iconShow")
+          iconPrincipalWhite.classList.add("iconHidden")
+          iconPrincipalBlack.classList.remove("iconHidden")
+          iconPrincipalBlack.classList.add("iconShow")
           }
     }
   }
