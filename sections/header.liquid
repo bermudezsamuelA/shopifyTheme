@@ -8,10 +8,10 @@
       alt="{{ section.settings.logo.alt }}"
       width="{{ section.settings.logo_width }}"
       > -->
-      <div class="iconHeader iconShow" id="iconPrincipalWhite" >
+      <div class="iconShow" id="iconPrincipalWhite" >
           {% include 'my-theme-icons' with 'principal' %}
       </div>
-      <div class="iconHeader iconHidden"  id="iconPrincipalBlack"  >
+      <div class="iconHidden"  id="iconPrincipalBlack"  >
           {% include 'my-theme-icons' with 'principalBlack' %}
       </div>
 
@@ -323,7 +323,7 @@
 
         PagesHeaderSection.classList.remove("showMenu")
         PagesHeaderSection.classList.add("hiddeMenu")
-        
+
         iconPrincipalWhite.classList.remove("iconHidden")
         iconPrincipalWhite.classList.add("iconShow")
         iconPrincipalBlack.classList.remove("iconShow")
